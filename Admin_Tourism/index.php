@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
+  header("location:pages/sign-in.php");
+  exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +19,7 @@
   <link rel="icon" type="image/png" href="./assets/img/favicon.png">
 
   <title>
-    AdventureoryX
+    Dashboard-AdventureoryX
   </title>
 
   <!--     Fonts and icons     -->
@@ -54,13 +64,23 @@
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link text-white " href="./dashboard.html">
+          <a class="nav-link text-white " href="index.php">
 
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center ">
               <i class="material-icons opacity-10">dashboard</i>
             </div>
 
             <span class="nav-link-text ms-1">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="./dashboard.html">
+
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <!-- <i class="material-icons opacity-10"></i> -->
+            </div>
+
+            <span class="nav-link-text ms-1">Users</span>
           </a>
         </li>
 
@@ -112,7 +132,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="./sign-up.html">
+          <a class="nav-link text-white " href="./pages/sign-up.php">
 
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">assignment</i>

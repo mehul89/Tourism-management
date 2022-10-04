@@ -1,6 +1,10 @@
 <?php
 require_once "dbConfig.php";
 
+$showalert = false;
+$showerror = false;
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   $username = $_POST["username"];
@@ -9,16 +13,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $Cpasseord = $_POST["Cpassword"];
   $err = false;
 
+
   if (($password == $Cpasseord) && $err == false) {
 
     $sql = "INSERT INTO `signup` ( `name`, `email`, `password`, `Conform_pass`) VALUES ( '$username', '$email', '$password ', '$Cpasseord');";
 
     $result = mysqli_query($conn, $sql);
 
-    if ($err) {
-      $err = true;
+    if ($result) {
+      $showalert = true;
     } else {
-     echo $err  = "password do not match";
+      echo $showerror  = "password do not match";
     }
   }
 }
@@ -36,8 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-    Material Dashboard 2 by Creative Tim
-  </title>
+    Sign-up Form
+</title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
   <!-- Nucleo Icons -->
@@ -55,11 +60,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   <?php
 
-  if ($err) {
+  if ($showalert) {
 
-    echo "<div class='alert alert-success' role='alert'>
-    your account is now creatd and you can login
-    </div>";
+    echo'<div class="alert alert-success">
+    <strong>Success!</strong> Your Accound now created You can login
+  </div>;';
+  }
+
+  if ($showerror) {
+
+    echo'<div class="alert alert-danger">
+    <strong>Error!</strong> ' . $showerror . '
+     
+  </div>;';
   }
   ?>
 
@@ -107,7 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="card-footer text-center pt-0 px-lg-2 px-1">
                   <p class="mb-2 text-sm mx-auto">
                     Already have an account?
-                    <a href="../pages/sign-in.html" class="text-primary text-gradient font-weight-bold">Sign in</a>
+                    <a href="../pages/sign-in.php" class="text-primary text-gradient font-weight-bold">Sign in</a>
                   </p>
                 </div>
               </div>
