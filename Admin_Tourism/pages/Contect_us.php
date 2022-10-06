@@ -3,28 +3,53 @@ require "dbConfig.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $fname = $_post["name"];
-    $email = $_post["email"];
-    $massage = $_post["massage"];
+    $fname = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
+
 
 
     $sql = " INSERT INTO `contect_us` ( `fname`, `email`, `description`)
- VALUES ( '$fname', '$email', '$massage');";
+ VALUES ( '$fname', '$email', '$message');";
 
+    $result = mysqli_query($conn, $sql);
 
-
-    if (mysqli_query($conn, $sql)) {
-        echo "<h2><center>" . "Data Inserted Employee Table" . "</h2></center>";
+    if (
+        !$_POST['name'] || empty($_POST['name'])
+        || !$_POST['email'] || empty($_POST['email'] || !$_POST['message'] || empty($_POST['message']))
+    ) {
+        echo "Please complete all form fields!";
     } else {
-        echo "Error:" . $sql . " " . mysqli_error($conn);
+        echo "Succeas";
+        header("location:../../index.html");
     }
-    mysqli_close($conn);
+
+    // if (!empty($_POST["submit"])) {
+
+    //     $toemail = $_POST["chapanerimehul7@gmail.com"];
+    //     $fname = $_POST["name"];
+    //     $email = $_POST["email"];
+
+    //     $mailheanders = "Name:" . $name .
+    //         "\r\n Email:" . $email .
+    //         "\r\n Message:" . $message . "\r\n";
+
+    //     if (mail($toemail, $name, $mailheanders)) {
+
+    //         $massges = " your information is Received Succesfully .";
+    //     } else {
+
+    //         echo "no";
+    //     }
+    // }
 }
+
 ?>
 
 
+
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -77,13 +102,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <div class="col-md-6">
                                                 <div class="input-group input-group-static mb-4">
                                                     <label>Full Name</label>
-                                                    <input type="name" class="form-control" placeholder="Full Name">
+                                                    <input type="name" name="name" class="form-control" placeholder="Full Name">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 ps-md-2">
                                                 <div class="input-group input-group-static mb-4">
                                                     <label>Email</label>
-                                                    <input type="email" class="form-control" placeholder="hello@creative-tim.com">
+                                                    <input type="email" name="email" class="form-control" placeholder="hello@creative-tim.com">
                                                 </div>
                                             </div>
                                         </div>

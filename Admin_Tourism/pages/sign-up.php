@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if ($showalert) {
 
     echo'<div class="alert alert-success">
-    <strong>Success!</strong> Your Accound now created You can login
+    <strong>Success!</strong> Your Account now created You can login
   </div>;';
   }
 

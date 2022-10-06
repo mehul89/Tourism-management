@@ -23,12 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $login = true;
     session_start();
     $_SESSION['loggedin'] = true;
-    header("location:../index.php");  
-
-    
+    header("location:../index.php");
   } else {
     $showerror = "invalid Credentiales";
-    
   }
 }
 
