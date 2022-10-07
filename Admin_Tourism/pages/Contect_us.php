@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Please complete all form fields!";
     } else {
         echo "Succeas";
-        header("location:../../index.html");
+        header("location:../../index.php");
     }
 
     // if (!empty($_POST["submit"])) {

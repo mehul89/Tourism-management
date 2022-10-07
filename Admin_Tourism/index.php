@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
@@ -64,7 +65,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link text-white " href="index.php">
+          <a class="nav-link text-white active " href="../Admin_Tourism/index.php">
 
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center ">
               <i class="material-icons opacity-10">dashboard</i>
@@ -74,7 +75,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="./dashboard.html">
+          <a class="nav-link text-white " href="./pages/Users.php">
 
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <!-- <i class="material-icons opacity-10"></i> -->
@@ -107,7 +108,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="./notifications.html">
+          <a class="nav-link text-white " href="./pages/rate.php">
 
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             </div>
@@ -264,14 +265,35 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                     <i class="material-icons opacity-10">weekend</i>
                   </div>
                   <div class="text-end pt-1">
-                    <p class="text-sm mb-0 text-capitalize">Users</p>
-                    <h4 class="mb-0">0</h4>
+                    <p class="text-sm mb-0 text-capitalize">Vsitors</p>
+                    <h4 class="mb-0">
+                      <?php
+                      include("./pages/dbConfig.php");
+
+                      // SQL QUERY
+                      $sql = "SELECT * FROM `visit`;";
+
+                      // FETCHING DATA FROM DATABASE
+                      $result = $conn->query($sql);
+
+                      if ($result->num_rows > 0) {
+                        // OUTPUT DATA OF EACH ROW
+                        while ($row = $result->fetch_assoc()) {
+                          echo
+                          $row["total_count"];
+                        }
+                      } else {
+                        echo "0";
+                      }
+
+                      $conn->close();
+                      ?></h4>
                   </div>
                 </div>
 
                 <hr class="dark horizontal my-0">
                 <div class="card-footer p-3">
-                  <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+0% </span>than last week</p>
+                  <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+1% </span>than last week</p>
                 </div>
               </div>
 
