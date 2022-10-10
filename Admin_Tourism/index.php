@@ -87,7 +87,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 
 
         <li class="nav-item">
-          <a class="nav-link text-white " href="./tables.html">
+          <a class="nav-link text-white " href="../Admin_Tourism/pages/packages.php">
 
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="fa-duotone fa-map-location-dot"></i>

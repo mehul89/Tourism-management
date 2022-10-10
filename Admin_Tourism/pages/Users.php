@@ -92,159 +92,45 @@ require("dbConfig.php");
 
 
 
-    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+    <?php
+    include("sidebar.php"); ?>
 
-        <div class="sidenav-header">
-            <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-            <a class="navbar-brand m-0" href="../index.php">
-                <!-- <img src="./assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo"> -->
-                <span class="ms-4 font-weight-bold fs-5 text text-white">AdventureoryX
-                </span>
-            </a>
-        </div>
+    <?php
+    include("navbar.php"); ?>
 
 
-        <hr class="horizontal light mt-0 mb-2">
-
-        <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link text-white Active " href="../index.php">
-
-                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center ">
-                            <i class="material-icons opacity-10">dashboard</i>
-                        </div>
-
-                        <span class="nav-link-text ms-1">Dashboard</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white active  " href="Users.php">
-
-                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <!-- <i class="material-icons opacity-10"></i> -->
-                        </div>
-
-                        <span class="nav-link-text ms-1">Users</span>
-                    </a>
-                </li>
 
 
-                <li class="nav-item">
-                    <a class="nav-link text-white " href="./tables.html">
 
-                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="fa-duotone fa-map-location-dot"></i>
-                        </div>
+    <div class="container-fluid py-5 ">
+        <div class="row">
 
-                        <span class="nav-link-text ms-1">Packages</span>
-                    </a>
-                </li>
+            <table id="example" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Date & Time</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
 
+                    $sql = "Select * from  `contect_us` ";
 
-                <li class="nav-item">
-                    <a class="nav-link text-white " href="./billing.html">
-
-                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        </div>
-
-                        <span class="nav-link-text ms-1">Inquiry </span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white " href="./notifications.html">
-
-                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        </div>
-
-                        <span class="nav-link-text ms-1">Rate & Reviews</span>
-                    </a>
-                </li>
+                    $result = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $id = $row['sno'];
+                        $name = $row['fname'];
+                        $email = $row['email'];
+                        $desc = $row['description'];
+                        $date = $row['dt'];
 
 
-                <li class="nav-item mt-3">
-                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link text-white " href="./profile.html">
-
-                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons opacity-10">person</i>
-                        </div>
-
-                        <span class="nav-link-text ms-1">Profile</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white " href="./pages/sign-up.php">
-
-                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons opacity-10">assignment</i>
-                        </div>
-
-                        <span class="nav-link-text ms-1">Sign Up</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white " href="./pages/logout.php">
-
-                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons opacity-10">assignment</i>
-                        </div>
-
-                        <span class="nav-link-text ms-1">Logout</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </aside>
-
-    <main class="main-content border-radius-lg ">
-        <!-- Navbar -->
-        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
-            <div class="container-fluid py-1 px-3">
-                <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar"></div>
-                <ul class="navbar-nav  justify-content-end">
-                    <li class="nav-item dropdown pe-2 d-flex align-items-center">
-                        <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa fa-bell cursor-pointer"></i>
-                        </a>
-            </div>
-            </div>
-        </nav>
-
-        <!-- End Navbar -->
-
-        <div class="container-fluid py-5 ">
-            <div class="row">
-
-                <table id="example" class="display" style="width:100%">
-                    <thead>
-                        <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Full Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Date & Time</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-
-                        $sql = "Select * from  `contect_us` ";
-
-                        $result = mysqli_query($conn, $sql);
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            $id = $row['sno'];
-                            $name = $row['fname'];
-                            $email = $row['email'];
-                            $desc = $row['description'];
-                            $date = $row['dt'];
-
-
-                            echo "<tr>
+                        echo "<tr>
                             <td>$id</td>
                             <td>$name</td>
                             <td>$email </td>
@@ -255,51 +141,51 @@ require("dbConfig.php");
                                                  
                                                      
                             </tr>";
+                    }
+
+
+
+
+
+                    ?>
+                </tbody>
+            </table>
+
+            <script>
+                edits = document.getElementsByClassName('edit');
+
+                Array.from(edits).forEach((element) => {
+                    element.addEventListener("click", (e) => {
+                        console.log("edit ");
+                        tr = e.target.parentNode.parentNode;
+                        title = tr.getElementsByTagName("td")[0].innerText;
+                        description = tr.getElementsByTagName("td")[1].innerText;
+                        console.log(title, description);
+                        titleEdit.value = title;
+                        descriptionEdit.value = description;
+                        snoEdit.value = e.target.id;
+                        console.log(e.target.id)
+                        $('#editModal').modal('toggle');
+                    })
+                })
+
+                deletes = document.getElementsByClassName('delete');
+                Array.from(deletes).forEach((element) => {
+                    element.addEventListener("click", (e) => {
+                        console.log("edit ");
+                        sno = e.target.id.substr(1);
+                        if (confirm("Are you sure you want to delete this note!")) {
+                            console.log("yes");
+                            window.location = `index.php?delete=${sno}`;
+                        } else {
+                            console.log("no");
                         }
-
-
-
-
-
-                        ?>
-                    </tbody>
-                </table>
-
-                <script>
-                    edits = document.getElementsByClassName('edit');
-
-                    Array.from(edits).forEach((element) => {
-                        element.addEventListener("click", (e) => {
-                            console.log("edit ");
-                            tr = e.target.parentNode.parentNode;
-                            title = tr.getElementsByTagName("td")[0].innerText;
-                            description = tr.getElementsByTagName("td")[1].innerText;
-                            console.log(title, description);
-                            titleEdit.value = title;
-                            descriptionEdit.value = description;
-                            snoEdit.value = e.target.id;    
-                            console.log(e.target.id)
-                            $('#editModal').modal('toggle');
-                        })
                     })
+                })
+            </script>
 
-                    deletes = document.getElementsByClassName('delete');
-                    Array.from(deletes).forEach((element) => {
-                        element.addEventListener("click", (e) => {
-                            console.log("edit ");
-                            sno = e.target.id.substr(1);
-                            if (confirm("Are you sure you want to delete this note!")) {
-                                console.log("yes");
-                                window.location = `index.php?delete=${sno}`;
-                            } else {
-                                console.log("no");
-                            }
-                        })
-                    })
-                </script>
-
-            </div>
         </div>
+    </div>
 
 </body>
 
