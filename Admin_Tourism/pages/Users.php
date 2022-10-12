@@ -2,6 +2,8 @@
 require("dbConfig.php");
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -94,159 +96,105 @@ require("dbConfig.php");
 
     <?php
     include("sidebar.php"); ?>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
 
-    <?php
-    include("navbar.php"); ?>
-
-
-
+        <?php
+        include("navbar.php"); ?>
 
 
-    <div class="container-fluid py-5 ">
-        <div class="row">
-
-            <table id="example" class="display" style="width:100%">
-                <thead>
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Full Name</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Date & Time</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-
-                    $sql = "Select * from  `contect_us` ";
-
-                    $result = mysqli_query($conn, $sql);
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        $id = $row['sno'];
-                        $name = $row['fname'];
-                        $email = $row['email'];
-                        $desc = $row['description'];
-                        $date = $row['dt'];
 
 
-                        echo "<tr>
+
+        <div class="container-fluid py-5 ">
+            <div class="row">
+                <h3 class="text-center">All Users</h3>
+
+                <table id="example" class="display" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Date & Time</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+
+                        $sql = "Select * from  `contect_us` ";
+
+                        $result = mysqli_query($conn, $sql);
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $id = $row['sno'];
+                            $name = $row['fname'];
+                            $email = $row['email'];
+                            $desc = $row['description'];
+                            $date = $row['dt'];
+
+
+                            echo "<tr>
                             <td>$id</td>
                             <td>$name</td>
                             <td>$email </td>
                             <td>$desc </td>
                             <td>$date </td>   
                             <td><a type='button' name='delete'   <i class='fa-solid fa-pen-to-square delete' aria-hidden='true'></i></a>
-                            <a type='button' name='snoEdit' style='margin-left:20px' <i class='fa-sharp fa-solid fa-trash edit' aria-hidden='true'></i></a></td>
+                            <a href='delete_users.php?deleteid=$id' type='button' name='snoEdit' style='margin-left:20px' <i class='fa-sharp fa-solid fa-trash edit' aria-hidden='true'></i></a></td>
                                                  
                                                      
                             </tr>";
-                    }
-
-
-
-
-
-                    ?>
-                </tbody>
-            </table>
-
-            <script>
-                edits = document.getElementsByClassName('edit');
-
-                Array.from(edits).forEach((element) => {
-                    element.addEventListener("click", (e) => {
-                        console.log("edit ");
-                        tr = e.target.parentNode.parentNode;
-                        title = tr.getElementsByTagName("td")[0].innerText;
-                        description = tr.getElementsByTagName("td")[1].innerText;
-                        console.log(title, description);
-                        titleEdit.value = title;
-                        descriptionEdit.value = description;
-                        snoEdit.value = e.target.id;
-                        console.log(e.target.id)
-                        $('#editModal').modal('toggle');
-                    })
-                })
-
-                deletes = document.getElementsByClassName('delete');
-                Array.from(deletes).forEach((element) => {
-                    element.addEventListener("click", (e) => {
-                        console.log("edit ");
-                        sno = e.target.id.substr(1);
-                        if (confirm("Are you sure you want to delete this note!")) {
-                            console.log("yes");
-                            window.location = `index.php?delete=${sno}`;
-                        } else {
-                            console.log("no");
                         }
-                    })
-                })
-            </script>
 
+
+
+
+
+                        ?>
+                    </tbody>
+                </table>
+
+                <script>
+                    edits = document.getElementsByClassName('edit');
+
+                    Array.from(edits).forEach((element) => {
+                        element.addEventListener("click", (e) => {
+                            console.log("edit ");
+                            tr = e.target.parentNode.parentNode;
+                            title = tr.getElementsByTagName("td")[0].innerText;
+                            description = tr.getElementsByTagName("td")[1].innerText;
+                            console.log(title, description);
+                            titleEdit.value = title;
+                            descriptionEdit.value = description;
+                            snoEdit.value = e.target.id;
+                            console.log(e.target.id)
+                            $('#editModal').modal('toggle');
+                        })
+                    })
+
+                    deletes = document.getElementsByClassName('delete');
+                    Array.from(deletes).forEach((element) => {
+                        element.addEventListener("click", (e) => {
+                            console.log("edit ");
+                            sno = e.target.id.substr(1);
+                            if (confirm("Are you sure you want to delete this note!")) {
+                                console.log("yes");
+                                window.location = `index.php?delete=${sno}`;
+                            } else {
+                                console.log("no");
+                            }
+                        })
+                    })
+                </script>
+
+            </div>
         </div>
-    </div>
+    </main>
 
 </body>
 
 </html>
 
 
-<!-- delete qury -->
 
-<?php
-
-$insert = false;
-$update = false;
-$delete = false;
-
-if (isset($_GET['delete'])) {
-    $sno = $_GET['delete'];
-    $delete = true;
-    $sql = "DELETE FROM `contect_us` WHERE `sno` = $sno";
-    $result = mysqli_query($conn, $sql);
-}
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-    if (isset($_POST['snoEdit'])) {
-
-        // Update the record
-        $sno = $_POST["sno"];
-        $name = $_POST["fname"];
-        $email = $_POST["email"];
-        $desc = $_POST["description"];
-        $email = $_POST["dt"];
-
-        // Sql query to be executed
-
-
-        $sql = "UPDATE `contect_us` SET `fname` = '$name' , `email` = '$email' , `description` = ='$desc' WHERE `contect_us`.`sno` = $sno";
-        $result = mysqli_query($conn, $sql);
-
-
-        if ($result) {
-            $update = true;
-        } else {
-            echo "We could not update the record successfully";
-        }
-    } else {
-
-        $name = $_POST["fname"];
-        $email = $_POST["email"];
-        $desc = $_POST["description"];
-
-        // Sql query to be executed
-
-        $sql = "INSERT INTO `contect_us` (`fname`, `email` , `description`) VALUES ('$name', '$email', $desc)";
-        $result = mysqli_query($conn, $sql);
-
-
-        if ($result) {
-            $insert = true;
-        } else {
-            echo "The record was not inserted successfully because of this error ---> " . mysqli_error($conn);
-        }
-    }
-}
-
-?>

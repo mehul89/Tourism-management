@@ -86,13 +86,14 @@
                         $images = $row['Upload_image'];
                         $title = $row['Tour_Title'];
                         $about = $row['About'];
+                        $id = $row['id'];
 
 
                     ?>
                         <div class="col-lg-3 col-md-6 col-12">
                             <div class="card card-plain">
                                 <div class="card-header p-0 position-relative">
-                                    <a class="d-block blur-shadow-image">
+                                    <a class="d-block blur-shadow-image" href="../display_package.php?id=<?php echo $id;?>">
                                         <img src="../Admin_Tourism/pages/packages/images/<?php echo $images; ?>" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg" loading="lazy">
                                     </a>
                                 </div>

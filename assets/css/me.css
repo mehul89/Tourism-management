@@ -5,3 +5,8 @@
 .me-siz{
     font-size: 40px !important;
 }
+
+ul{
+
+    overflow-y: hidden !important ;
+}

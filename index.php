@@ -31,6 +31,7 @@ include("./Admin_Tourism/pages/Visitor.php");
 
   <!-- CSS Files -->
   <link id="pagestyle" href="./assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+  <linl id="pagestyle" href="./assets/css/me.css" rel="stylesheet"></linl>
 </head>
 
 <body class="index-page bg-gray-200">
@@ -95,7 +96,8 @@ include("./Admin_Tourism/pages/Visitor.php");
 
 
             <p class="lead text-white mt-3">Organized group trips & tours
-              round the world
+              round the world </p>
+            <a href="../Tourism-management/Packages/all_packages.php" class="btn btn-white">Explore</a>
           </div>
         </div>
       </div>
@@ -109,17 +111,16 @@ include("./Admin_Tourism/pages/Visitor.php");
             <div class="row">
               <div class="col-md-4 position-relative">
                 <div class="p-3 text-center">
-                  <h1 class="text-gradient text-primary"><span id="state1" countTo="70">0</span>+</h1>
-                  <h5 class="mt-3">Coded Elements</h5>
-                  <p class="text-sm font-weight-normal">From buttons, to inputs, navbars, alerts or cards, you are
-                    covered</p>
+                  <h1 class="text-gradient text-primary"><span id="state1" countTo="10000">0</span>+</h1>
+                  <h5 class="mt-3">Participants</h5>
+                  <p class="text-sm font-weight-normal">Participants in India's Largest Trekking Organization</p>
                 </div>
                 <hr class="vertical dark">
               </div>
               <div class="col-md-4 position-relative">
                 <div class="p-3 text-center">
-                  <h1 class="text-gradient text-primary"> <span id="state2" countTo="15">0</span>+</h1>
-                  <h5 class="mt-3">Design Blocks</h5>
+                  <h1 class="text-gradient text-primary"> <span id="state2" countTo="500">0</span>+</h1>
+                  <h5 class="mt-3">Volunteers</h5>
                   <p class="text-sm font-weight-normal">Mix the sections, change the colors and unleash your creativity
                   </p>
                 </div>
@@ -127,10 +128,11 @@ include("./Admin_Tourism/pages/Visitor.php");
               </div>
               <div class="col-md-4">
                 <div class="p-3 text-center">
-                  <h1 class="text-gradient text-primary" id="state3" countTo="4">0</h1>
-                  <h5 class="mt-3">Pages</h5>
-                  <p class="text-sm font-weight-normal">Save 3-4 weeks of work when you use our pre-made pages for your
-                    website</p>
+                  <h1 class="text-gradient text-primary"><span id="state3" countTo="45">0</span>+</h1>
+                  <h5 class="mt-3">Treks</h5>
+                  <!-- <p class="text-sm font-weight-normal">
+                    </p> -->
+                  <hr class="vertical dark">
                 </div>
               </div>
             </div>
@@ -138,6 +140,207 @@ include("./Admin_Tourism/pages/Visitor.php");
         </div>
       </div>
     </section>
+
+    <!-- heighlighted Events -->
+
+    <section>
+      <div class="container  bg-light rounded-3 ">
+        <div class="py-6">
+          <h2 class="h3 text-primary mb-1">Highlighted Events</h2>
+          <p class="text-secondary mb-4">
+            Recommended camps by our Instructors
+          </p>
+          <ul class=" list-group-numbered overflow-scroll container d-flex  " style="overflow-y: hidden !important;">
+            <li class=" px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/dunny-point-marine-camp-beyt-dwarka"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4483d70.jpg" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4483d70.jpg 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4483d70.jpg 2x" class="rounded-3"></a></li>
+            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/kedarkantha-snow-trek-uttrakhand"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/64dedb0.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/64dedb0.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/64dedb0.png 2x" class="rounded-3"></a></li>
+            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/jaisalmer-desert-camping-jaisalmer"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/6f05d4d.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/6f05d4d.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/6f05d4d.png 2x" class="rounded-3"></a></li>
+            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/dalhousie-winter-trekking-expedition-himachal-pradesh"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/1902555.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/1902555.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/1902555.png 2x" class="rounded-3"></a></li>
+            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/magical-maharashtra"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/f8030c1.jpg" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/f8030c1.jpg 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/f8030c1.jpg 2x" class="rounded-3"></a></li>
+            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/snow-trekking-in-manali-manali"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/9973111.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/9973111.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/9973111.png 2x" class="rounded-3"></a></li>
+            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/white-rann-of-kutch-white-desert"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/0213804.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/0213804.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/0213804.png 2x" class="rounded-3"></a></li>
+            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/kasol-manali"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/63f6922.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/63f6922.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/63f6922.png 2x" class="rounded-3"></a></li>
+            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/discover-the-dangs-dang"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/c046616.jpg" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/c046616.jpg 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/c046616.jpg 2x" class="rounded-3"></a></li>
+            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/explore-himalayas-visit-amritsar-manali"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/cc6bbfb.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/cc6bbfb.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/cc6bbfb.png 2x" class="rounded-3"></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Diwali Events -->
+
+    <section>
+      <div class="container bg-light rounded-3">
+        <div class="container">
+          <div class="py-6">
+            <h2 class="h3 text-primary mb-1">Diwali Events</h2>
+            <p class="text-secondary mb-4"></p>
+            <div class="overflow-scroll container d-flex " style="overflow-y: hidden !important;">
+
+              <div class=" px-3 event_1b27v "><a href="https://invinciblengo.org/events/jaisalmer-desert-camping-jaisalmer"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/754722c.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/754722c.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/754722c.png 2x" class="rounded-3">
+
+                </a></div>
+              <div class=" px-3 event_1b27v "><a href="https://invinciblengo.org/events/dunny-point-marine-camp-beyt-dwarka"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/aae1ea4.jpg" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/aae1ea4.jpg 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/aae1ea4.jpg 2x" class="rounded-3">
+
+                </a></div>
+              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/white-rann-of-kutch-white-desert"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/013a623.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/013a623.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/013a623.png 2x" class="rounded-3">
+
+                </a></div>
+              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/beyt-dwarka-beach-camping"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/7340a96.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/7340a96.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/7340a96.png 2x" class="rounded-3">
+
+                </a></div>
+              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/magical-maharashtra"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/43a5de9.jpg" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/43a5de9.jpg 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/43a5de9.jpg 2x" class="rounded-3">
+
+                </a></div>
+              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/bakor-nature-camp-mahisagar"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/2128fb1.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/2128fb1.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/2128fb1.png 2x" class="rounded-3">
+
+                </a></div>
+              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/saputara-adventure-camp-saputara-hill-station-the-danges-south-gujarat"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/ad7a1ea.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/ad7a1ea.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/ad7a1ea.png 2x" class="rounded-3">
+
+                </a></div>
+              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/manali-trekking-expedition-himachal-pradesh"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/05aa5cd.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/05aa5cd.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/05aa5cd.png 2x" class="rounded-3">
+
+                </a></div>
+              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/polo-forest-trekking-camp-north-gujarat"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/a859d99.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/a859d99.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/a859d99.png 2x" class="rounded-3">
+
+                </a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <!-- weekend section  -->
+
+    <section>
+
+      <div class="container bg-light rounded-3">
+        <div class="container">
+          <div class="py-6">
+            <h2 class="h3 text-primary mb-1">Weekend Events</h2>
+            <p class="text-secondary mb-4"></p>
+            <div class="overflow-scroll container d-flex " style="overflow-y: hidden !important;">
+              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/magical-maharashtra"><img alt="Magical Maharashtra" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/094303a.jpg" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/094303a.jpg 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/094303a.jpg 2x" class=" rounded-3">
+                  <div class=" text-center title_2A6MW mt-3">
+                    Magical Maharashtra
+                  </div>
+                </a></div>
+              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/bakor-nature-camp-mahisagar"><img alt="Bakor" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4441d39.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4441d39.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4441d39.png 2x" class=" rounded-3">
+                  <div class=" text-center title_2A6MW mt-3">
+                    Bakor
+                  </div>
+                </a></div>
+              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/discover-the-dangs-dang"><img alt="Discover the Dangs" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/73f8e60.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/73f8e60.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/73f8e60.png 2x" class=" rounded-3">
+                  <div class=" text-center title_2A6MW mt-3">
+                    Discover the Dangs
+                  </div>
+                </a></div>
+              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/polo-forest-trekking-camp-north-gujarat"><img alt="Polo Forest" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/709c09a.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/709c09a.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/709c09a.png 2x" class=" rounded-3">
+                  <div class=" text-center title_2A6MW mt-3">
+                    Polo Forest
+                  </div>
+                </a></div>
+              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/saputara-adventure-camp-saputara-hill-station-the-danges-south-gujarat"><img alt="Saputara" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/10246b2.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/10246b2.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/10246b2.png 2x" class=" rounded-3">
+                  <div class=" text-center title_2A6MW mt-3">
+                    Saputara
+                  </div>
+                </a></div>
+              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/bakor-1-day-trek-mahisagar"><img alt="Bakor 1 Day" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/32e516b.jpg" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/32e516b.jpg 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/32e516b.jpg 2x" class=" rounded-3">
+                  <div class=" text-center title_2A6MW mt-3">
+                    Bakor 1 Day
+                  </div>
+                </a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- snow Events -->
+
+    <section>
+
+      <div class="container bg-light rounded-3">
+        <div class="container">
+          <div class="py-6">
+            <h2 class="h3 text-primary mb-1">Snow Events</h2>
+            <p class="text-secondary mb-4"></p>
+            <div class="overflow-scroll container d-flex" style="overflow-y: hidden !important;">
+              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/brahmatal-trek"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/db0648d.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/db0648d.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/db0648d.png 2x" class="rounded-3">
+
+                </a></div>
+              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/dalhousie-winter-trekking-expedition-himachal-pradesh"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/f1eb5e2.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/f1eb5e2.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/f1eb5e2.png 2x" class="rounded-3">
+
+                </a></div>
+              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/kedarkantha-snow-trek-uttrakhand"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/320e06e.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/320e06e.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/320e06e.png 2x" class="rounded-3">
+
+                </a></div>
+              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/snow-trekking-in-manali-manali"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/13a769b.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/13a769b.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/13a769b.png 2x" class="rounded-3">
+
+                </a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- Monsoon Events -->
+
+
+    <section>
+      <div class="container bg-light rounded-3">
+        <div class="container">
+          <div class="py-6">
+            <h2 class="h3 text-primary mb-1">Monsoon Events</h2>
+            <p class="text-secondary mb-4"></p>
+            <div class="overflow-scroll container d-flex" style="overflow-y: hidden !important;">
+              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/saputara-adventure-camp-saputara-hill-station-the-danges-south-gujarat"><img alt="Saputara" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/10246b2.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/10246b2.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/10246b2.png 2x" class="rounded-3">
+                  <div class=" text-center title_2A6MW mt-3">
+                    Saputara
+                  </div>
+                </a></div>
+              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/polo-forest-trekking-camp-north-gujarat"><img alt="Polo Forest" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/709c09a.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/709c09a.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/709c09a.png 2x" class="rounded-3">
+                  <div class=" text-center title_2A6MW mt-3">
+                    Polo Forest
+                  </div>
+                </a></div>
+              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/magical-maharashtra"><img alt="Magical Maharashtra" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/acf7800.jpg" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/acf7800.jpg 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/acf7800.jpg 2x" class="rounded-3">
+                  <div class=" text-center title_2A6MW mt-3">
+                    Magical Maharashtra
+                  </div>
+                </a></div>
+              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/bakor-nature-camp-mahisagar"><img alt="Bakor" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4441d39.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4441d39.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4441d39.png 2x" class="rounded-3">
+                  <div class=" text-center title_2A6MW mt-3">
+                    Bakor
+                  </div>
+                </a></div>
+              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/kasol-manali"><img alt="Kasol + Manali" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/ab85ca9.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/ab85ca9.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/ab85ca9.png 2x" class="rounded-3">
+                  <div class=" text-center title_2A6MW mt-3">
+                    Kasol + Manali
+                  </div>
+                </a></div>
+              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/explore-himalayas-visit-amritsar-manali"><img alt="Explore Himalayas" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/350d482.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/350d482.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/350d482.png 2x" class="rounded-3">
+                  <div class=" text-center title_2A6MW mt-3">
+                    Explore Himalayas
+                  </div>
+                </a></div>
+              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/manali-trekking-expedition-himachal-pradesh"><img alt="Manali" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/812e288.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/812e288.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/812e288.png 2x" class="rounded-3">
+                  <div class=" text-center title_2A6MW mt-3">
+                    Manali
+                  </div>
+                </a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
 
     <!-- <section>
       <h1 class=" my-3 mb- text-lg-center">Highlighted Events</h1>

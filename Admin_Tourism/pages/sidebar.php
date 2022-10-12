@@ -51,7 +51,7 @@
 
 
             <li class="nav-item">
-                <a class="nav-link text-white " href="./billing.html">
+                <a class="nav-link text-white " href="./inquiry.php">
 
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     </div>
