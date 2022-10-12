@@ -43,7 +43,8 @@
 
     <style>
         img {
-            width: 200px;
+            width: 150px;
+            height: 150px;
         }
     </style>
 
@@ -55,12 +56,66 @@
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <?php include('navbar.php'); ?>
 
+    <!-- Data modal -->
+
+
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form action="" method="POST" enctype="multipart/form-data" method="POST" id="ModalForm">
+                        {{csrf_field()}}
+                        <input type="hidden" id="editId" value="">
+                        <div class="form-group">
+                            <label for="editName">First Name</label>
+                            <input type="text" name="name" class="form-control" id="editName" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editSurname">Surname</label>
+                            <input type="text" name="surname" class="form-control" id="editSurname" placeholder="Surname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editEmail">E-mail address</label>
+                            <input type="email" name="email" class="form-control" id="editEmail" placeholder="name@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editPhone">Mobile Phone</label>
+                            <input type="tel" name="mobilePhone" class="form-control" id="editPhone" placeholder="+44" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editLevel">Level</label>
+                            <select class="form-control" id="editLevel" name="level">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="modal-footer">
+                            <a class="btn btn-secondary" data-dismiss="modal">Close</a>
+                            <button type="button" id="saveModalButton" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container-fluid py-5 ">
 
-        <a type="button" href="action_packages.php" class="btn btn-primary">Add Packages</a>
+        <a type="button" href="add_packages.php" class="btn btn-primary">Add Packages</a>
         <div class="row">
 
-            <h3 class="text-center">Add Packages</h3>
+            <h3 class="text-center">All Packages</h3>
 
 
 
@@ -113,8 +168,10 @@
                             <td>$Altitude </td>
                             <td>$about </td>
                             <td ><img src='./packages/images/$images'><td>
-                            <td><a type='button' name='delete'   <i class='fa-solid fa-pen-to-square delete' aria-hidden='true'></i></a>
-                            <a type='button' name='snoEdit' style='margin-left:20px' <i class='fa-sharp fa-solid fa-trash edit' aria-hidden='true'></i></a></td>
+                            <td>
+                            <a href='update_packages.php?updateid=$id' type='button' name='snoEdit'   <i class='fa-solid fa-pen-to-square ' aria-hidden='true'></i>  </a>
+                            <a href='delete_packages.php?deleteid=$id' type='button' name='delete' style='margin-left:20px' <i class='fa-sharp fa-solid fa-trash ' aria-hidden='true'></i></a>
+                            </td>
                             
            
                              </tr>";
@@ -123,39 +180,10 @@
                 </tbody>
             </table>
 
-            <script>
-                edits = document.getElementsByClassName('edit');
-
-                Array.from(edits).forEach((element) => {
-                    element.addEventListener("click", (e) => {
-                        console.log("edit ");
-                        tr = e.target.parentNode.parentNode;
-                        title = tr.getElementsByTagName("td")[0].innerText;
-                        description = tr.getElementsByTagName("td")[1].innerText;
-                        console.log(title, description);
-                        titleEdit.value = title;
-                        descriptionEdit.value = description;
-                        snoEdit.value = e.target.id;
-                        console.log(e.target.id)
-                        $('#editModal').modal('toggle');
-                    })
-                })
-
-                deletes = document.getElementsByClassName('delete');
-                Array.from(deletes).forEach((element) => {
-                    element.addEventListener("click", (e) => {
-                        console.log("edit ");
-                        sno = e.target.id.substr(1);
-                        if (confirm("Are you sure you want to delete this note!")) {
-                            console.log("yes");
-                            window.location = `index.php?delete=${sno}`;
-                        } else {
-                            console.log("no");
-                        }
-                    })
-                })
-            </script>
 
         </div>
     </div>
 </main>
+
+
+</html>

@@ -1,7 +1,7 @@
 var typed = new Typed(".typing", {
-    strings: ["hello ", "How are", "You"],
-    typeSpeed: 150,
-    backSpeed: 70,
-    loop: true
-  })
+  strings: ["Advanchar", "Nature", "Excitment ", "Peace", ""],
+  typeSpeed: 150,
+  backSpeed: 70,
+  loop: true
+})
 

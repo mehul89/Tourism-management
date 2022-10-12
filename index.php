@@ -139,7 +139,7 @@ include("./Admin_Tourism/pages/Visitor.php");
       </div>
     </section>
 
-    <section>
+    <!-- <section>
       <h1 class=" my-3 mb- text-lg-center">Highlighted Events</h1>
       <h3 class="text-lg-center"> Recommended camps by our Instructors</h3>
 
@@ -169,16 +169,16 @@ include("./Admin_Tourism/pages/Visitor.php");
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-    </section>
+    </section> -->
 
 
 
-    <section>
+    <!-- <section>
       <h3 class=" my-3 mb- text-lg-center">Diwali Events</h3>
 
 
 
-    </section>
+    </section> -->
 
 
 
