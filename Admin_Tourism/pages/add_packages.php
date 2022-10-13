@@ -126,7 +126,8 @@
                                                         $category_id = $row['category_id'];
                                                         $cname = $row['cname'];
 
-                                                    ?> <option value="<?php echo $category_id; ?>"><?php echo $category_id; echo $cname; ?></option>
+                                                    ?> <option value="<?php echo $category_id; ?>"><?php echo $category_id;
+                                                                                                    echo $cname; ?></option>
                                                     <?php
                                                     }
                                                     ?>
@@ -144,7 +145,7 @@
                                             const example = new Choices(element, {});
                                         }
                                     </script>
- 
+
 
                                     <div class="col-md-12">
 
@@ -203,11 +204,6 @@
 
 </html>
 
-<?php
-include("dbConfig.php");
-
-?>
-
 
 
 <!-- Add data in database -->
@@ -226,18 +222,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $age = $_POST['Age_Group'];
     $altitude = $_POST['Altitude'];
     $aboute = $_POST['About'];
-    $category_id = $_POST['choice-button'];
+    $ukey = $_POST['choice-button'];
 
     $image = $_FILES['image']['name'];
     $tempname = $_FILES["image"]["tmp_name"];
     $folder = "./packages/images/" . $image;
 
 
-    $sql = "INSERT INTO tour_packaes  ( Upload_image , Tour_Title, sub_title , Duration , Difficulty, Age_Group,  Altitude,  About, unique_id  ) VALUES ( '$image','$title' ,'$sub', '$duration', '$difficulty' ,'$age' ,'$altitude' , '$aboute', '$category_id' ) ;";
-    
-    echo "<pre>";
-    print_r($sql);
-    echo "</pre>";
+    $sql = "INSERT INTO tour_packaes  ( Upload_image , Tour_Title, sub_title , Duration , Difficulty, Age_Group,  Altitude,  About, unique_id  ) VALUES ( '$image','$title' ,'$sub', '$duration', '$difficulty' ,'$age' ,'$altitude' , '$aboute', '$ukey' ) ;";
+
+
 
     $result = mysqli_query($conn, $sql);
 

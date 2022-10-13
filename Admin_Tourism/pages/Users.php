@@ -195,6 +195,3 @@ require("dbConfig.php");
 </body>
 
 </html>
-
-
-

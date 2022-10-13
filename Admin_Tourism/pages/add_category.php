@@ -66,7 +66,7 @@
                     <div class="card">
                         <div class="card-heard">
 
-                            <h4>Add Packages</h4>
+                            <h4>Add Manage</h4>
 
 
 

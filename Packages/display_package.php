@@ -1,5 +1,5 @@
 <?php
-include("Admin_Tourism/pages/dbConfig.php");
+include("../Admin_Tourism/pages/dbConfig.php");
 
 $id = $_REQUEST["id"];
 $sql = "Select * from `tour_packaes` WHERE id = $id ";
@@ -12,6 +12,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     $difficulty = $row["Difficulty"];
     $age = $row["Age_Group"];
     $alt = $row["Altitude"];
+    $img = $row["Upload_image"];
 
     $about = $row['About'];
 }
@@ -22,8 +23,8 @@ while ($row = mysqli_fetch_assoc($result)) {
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <title>
 
         Home -AdventureoryX
@@ -33,9 +34,9 @@ while ($row = mysqli_fetch_assoc($result)) {
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
 
     <!-- Nucleo Icons -->
-    <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
-    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/me.css">
+    <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/me.css">
 
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
@@ -44,8 +45,8 @@ while ($row = mysqli_fetch_assoc($result)) {
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 
     <!-- CSS Files -->
-    <link id="pagestyle" href="./assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
-    <linl id="pagestyle" href="./assets/css/me.css" rel="stylesheet"></linl>
+    <link id="pagestyle" href="../assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+    <linl id="pagestyle" href="../assets/css/me.css" rel="stylesheet"></linl>
 </head>
 
 <body>
@@ -167,7 +168,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     <div class="row">
                         <div class="col-3 position-relative max-width-300 mx-auto">
                             <div class="blur-shadow-image">
-                                <img class="w-100 h-100 border-radius-xl position-absolute d-xl-block d-none" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4483d70.jpg" loading="lazy" alt="image">
+                                <img class="w-100 h-100 border-radius-xl position-absolute d-xl-block d-none" src="../Admin_Tourism/pages/packages/images/<?php echo $img; ?>" loading="lazy" alt="image">
                             </div>
                             <div class="colored-shadow" style="background-image: url(&quot;https:https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4483d70.jpg);"></div>
                         </div>

@@ -134,8 +134,8 @@
                         <th scope="col">About</th>
                         <th scope="col">Category</th>
                         <th scope="col">images</th>
-                        
-                        
+
+
                         <th scope="col"></th>
                         <th scope="col">Action</th>
 
