@@ -67,6 +67,7 @@
 
         <div class="container">
             <a type="button" href="packages.php" class="btn btn-primary  justify-content-end">Dispalyed Packages</a>
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
@@ -90,10 +91,61 @@
                                     </div>
                                     <div class="col-md-6">
 
+                                        <label for="">Subtitle</label>
+                                        <input type="text" placeholder="Enter Tour Title " class="form-control" name="sub">
+
+                                    </div>
+
+
+
+                                    <div class="col-md-6">
+
                                         <label for="">Duration </label>
                                         <input type="text" class="form-control" placeholder="Duration" name="Duration">
 
                                     </div>
+                                    <!-- dropdown -->
+
+                                    <div class="container col-md-6">
+                                        <div class="row">
+                                            <div class="col-3 mt-4 mx-auto">
+                                                <?php
+                                                include("dbConfig.php");
+                                                ?>
+                                                <select class="form-control" name="choice-button" id="choice-button" placeholder="Language">
+                                                    <option value="<?php echo $cname; ?>" name="category" selected>All Event</option>
+                                                    <?php
+                                                    $sql = "Select * from `category` ";
+
+                                                    $result = mysqli_query($conn, $sql);
+
+                                                    $myid = 0;
+                                                    while ($row = mysqli_fetch_assoc($result)) {
+
+                                                        $myid++;
+                                                        $category_id = $row['category_id'];
+                                                        $cname = $row['cname'];
+
+                                                    ?> <option value="<?php echo $category_id; ?>"><?php echo $category_id; echo $cname; ?></option>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- mandatory scripts -->
+                                    <script src="../assets/js/plugins/choices.min.js"></script>
+                                    <script>
+                                        if (document.getElementById("choices-button")) {
+                                            var element = document.getElementById("choices-button");
+                                            const example = new Choices(element, {});
+                                        }
+                                    </script>
+ 
+
                                     <div class="col-md-12">
 
                                         <label for="">Difficulty</label>
@@ -151,6 +203,11 @@
 
 </html>
 
+<?php
+include("dbConfig.php");
+
+?>
+
 
 
 <!-- Add data in database -->
@@ -163,47 +220,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     $title = $_POST['Tour_Title'];
+    $sub = $_POST['sub'];
     $duration = $_POST['Duration'];
     $difficulty = $_POST['Difficulty'];
     $age = $_POST['Age_Group'];
     $altitude = $_POST['Altitude'];
     $aboute = $_POST['About'];
+    $category_id = $_POST['choice-button'];
 
     $image = $_FILES['image']['name'];
     $tempname = $_FILES["image"]["tmp_name"];
     $folder = "./packages/images/" . $image;
 
 
-
-
-
-
-    $sql = "INSERT INTO tour_packaes  ( Upload_image , Tour_Title, Duration , Difficulty, Age_Group,  Altitude,  About ) VALUES ( '$image','$title' , '$duration', '$difficulty' ,'$age' ,'$altitude' , '$aboute' ) ;";
+    $sql = "INSERT INTO tour_packaes  ( Upload_image , Tour_Title, sub_title , Duration , Difficulty, Age_Group,  Altitude,  About, unique_id  ) VALUES ( '$image','$title' ,'$sub', '$duration', '$difficulty' ,'$age' ,'$altitude' , '$aboute', '$category_id' ) ;";
+    
+    echo "<pre>";
+    print_r($sql);
+    echo "</pre>";
 
     $result = mysqli_query($conn, $sql);
 
     if (move_uploaded_file($tempname, $folder)) {
-
-        echo '<script>alert("Image uploaded successfully!")</script>';
+        // echo '<script>alert("Image uploaded successfully!")</script>';
     } else {
-        echo '<script>alert("Failed to upload image!")</script>';
+        // echo '<script>alert("Failed to upload image!")</script>';
     }
-
 
     if ($result) {
-
         echo '<script>alert("data uploaded successfully!")</script>';
-
-        
     } else {
 
         echo '<script>alert("Failed to upload image!")</script>';
     }
-
-    
 }
 
 ?>
-
-
-

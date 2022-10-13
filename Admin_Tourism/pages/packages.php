@@ -126,12 +126,16 @@
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">title</th>
+                        <th scope="col">Subtitle</th>
                         <th scope="col">Duration</th>
                         <th scope="col">Difficulty</th>
                         <th scope="col">Age</th>
                         <th scope="col">Altitude</th>
                         <th scope="col">About</th>
+                        <th scope="col">Category</th>
                         <th scope="col">images</th>
+                        
+                        
                         <th scope="col"></th>
                         <th scope="col">Action</th>
 
@@ -146,27 +150,34 @@
 
                     $result = mysqli_query($conn, $sql);
 
+                    $myid = 0;
                     while ($row = mysqli_fetch_assoc($result)) {
+                        $myid++;
                         $id = $row['id'];
                         $title = $row['Tour_Title'];
+                        $sub = $row['sub_title'];
                         $Duration  = $row['Duration'];
                         $Difficulty = $row['Difficulty'];
                         $Age = $row['Age_Group'];
                         $Altitude = $row['Altitude'];
                         $about = $row['About'];
                         $images = $row['Upload_image'];
+                        // $ukey = get_cetegory( $row['unique_id'] );
+                        $ukey = $row['unique_id'];
 
                         // $date = $row['dt'];
 
 
                         echo "<tr>
-                            <td>$id</td>
+                            <td>$myid</td>
                             <td>$title</td>
+                            <td>$sub</td>
                             <td>$Duration </td>
                             <td>$Difficulty </td>
                             <td>$Age </td>
                             <td>$Altitude </td>
                             <td>$about </td>
+                            <td>$ukey </td>
                             <td ><img src='./packages/images/$images'><td>
                             <td>
                             <a href='update_packages.php?updateid=$id' type='button' name='snoEdit'   <i class='fa-solid fa-pen-to-square ' aria-hidden='true'></i>  </a>
