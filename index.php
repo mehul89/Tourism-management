@@ -97,7 +97,7 @@ include("./Admin_Tourism/pages/Visitor.php");
 
             <p class="lead text-white mt-3">Organized group trips & tours
               round the world </p>
-            <a href="../Tourism-management/Packages/all_packages.php" class="btn btn-white">Explore</a>
+            <a href="../Tourism/Packages/all_packages.php" class="btn btn-white">Explore</a>
           </div>
         </div>
       </div>
