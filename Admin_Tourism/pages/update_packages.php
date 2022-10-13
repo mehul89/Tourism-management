@@ -90,6 +90,7 @@ $sql = "SELECT * FROM `tour_packaes` WHERE "
                                     $arrdata = mysqli_fetch_array($result);
 
                                     $title =  $arrdata['Tour_Title'];
+                                    $sub = $arrdata['sub_title'];
 
                                     $Duration  =  $arrdata['Duration'];
                                     $Difficulty =  $arrdata['Difficulty'];
@@ -97,6 +98,7 @@ $sql = "SELECT * FROM `tour_packaes` WHERE "
                                     $Altitude =  $arrdata['Altitude'];
                                     $about =  $arrdata['About'];
                                     $images =  $arrdata['Upload_image'];
+                                    $ukey = $arrdata['unique_id'];
 
 
 
@@ -104,24 +106,21 @@ $sql = "SELECT * FROM `tour_packaes` WHERE "
                                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                                         $idupdate = $_GET['updateid'];
-
-
-
-
-
                                         $title = $_POST['Tour_Title'];
+                                        $sub = $_POST['sub'];
                                         $duration = $_POST['Duration'];
                                         $difficulty = $_POST['Difficulty'];
                                         $age = $_POST['Age_Group'];
                                         $altitude = $_POST['Altitude'];
                                         $aboute = $_POST['About'];
+                                        $ukey = $_POST['unique_id'];
 
                                         $image = $_FILES['image']['name'];
                                         $tempname = $_FILES["image"]["tmp_name"];
                                         $folder = "./packages/images/" . $image;
 
 
-                                        $update = "UPDATE `tour_packaes` SET `Tour_Title`='$title',`Duration`='$duration',`Difficulty`='$difficulty',`Age_Group`='$age',`Altitude`='$altitude',`About`='$aboute' ,`Upload_image`='$images' WHERE id = $idupdate;";
+                                        $update = "UPDATE `tour_packaes` SET `Tour_Title`='$title',`sub_title`='$sub' ,`Duration`='$duration',`Difficulty`='$difficulty',`Age_Group`='$age',`Altitude`='$altitude',`About`='$aboute' ,`Upload_image`='$images',`unique_id`='$ukey' WHERE id = $idupdate;";
 
 
 
@@ -156,8 +155,20 @@ $sql = "SELECT * FROM `tour_packaes` WHERE "
                                     </div>
                                     <div class="col-md-6">
 
+                                        <label for="">Subtitle</label>
+                                        <input type="text" value="<?php echo $sub; ?>" class="form-control" name="sub">
+
+                                    </div>
+                                    <div class="col-md-6">
+
                                         <label for="">Duration </label>
                                         <input type="text" class="form-control" value="<?php echo $Duration; ?>" name="Duration">
+
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        <label for="">Unique key </label>
+                                        <input type="text" class="form-control" value="<?php echo $ukey; ?>" name="unique_id">
 
                                     </div>
                                     <div class="col-md-12">

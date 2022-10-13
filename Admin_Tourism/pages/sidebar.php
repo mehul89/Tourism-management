@@ -49,6 +49,16 @@
                 </a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link text-white " href="manage_category.php">
+
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                    </div>
+
+                    <span class="nav-link-text ms-1">Manage Category</span>
+                </a>
+            </li>
+
 
             <li class="nav-item">
                 <a class="nav-link text-white " href="./inquiry.php">
@@ -85,7 +95,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white " href="./pages/sign-up.php">
+                <a class="nav-link text-white " href="./sign-up.php">
 
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">assignment</i>
@@ -95,7 +105,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white " href="./pages/logout.php">
+                <a class="nav-link text-white " href="./logout.php">
 
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">assignment</i>

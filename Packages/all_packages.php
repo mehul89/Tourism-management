@@ -85,7 +85,7 @@
 
                         $images = $row['Upload_image'];
                         $title = $row['Tour_Title'];
-                        $about = $row['About'];
+                        $sub = $row['sub_title'];
                         $id = $row['id'];
 
 
@@ -93,7 +93,7 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <div class="card card-plain">
                                 <div class="card-header p-0 position-relative">
-                                    <a class="d-block blur-shadow-image" href="display_package.php?id=1">
+                                    <a class="d-block blur-shadow-image" href="../display_package.php?id=<?php echo $id;?>">
                                         <img src="../Admin_Tourism/pages/packages/images/<?php echo $images; ?>" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg" loading="lazy">
                                     </a>
                                 </div>
@@ -102,7 +102,7 @@
                                         <a href="javascript:;" class="text-dark font-weight-bold"><?php echo $title; ?></a>
                                     </h5>
                                     <p>
-                                        <?php echo $about; ?>
+                                        <?php echo $sub; ?>
                                     </p>
                                     <a href="javascript:;" class="text-info text-sm icon-move-right">Read More
                                         <i class="fas fa-arrow-right text-xs ms-1"></i>
