@@ -78,6 +78,8 @@ include("./Admin_Tourism/pages/Visitor.php");
       </div>
     </div>
   </div>
+
+
   <header class="header-2">
 
     <div class="page-header min-vh-80" style="background-image: url(&#39;https://images.unsplash.com/photo-1520769945061-0a448c463865?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&#39;);" loading="lazy">
@@ -145,22 +147,38 @@ include("./Admin_Tourism/pages/Visitor.php");
 
     <section>
       <div class="container  bg-light rounded-3 ">
+
+        <div class="float-right">
+          <a type="btn btn-primary" href="./Packages/all_packages.php" target="_blank">All Events</a>
+        </div>
         <div class="py-6">
           <h2 class="h3 text-primary mb-1">Highlighted Events</h2>
           <p class="text-secondary mb-4">
             Recommended camps by our Instructors
           </p>
+
           <ul class=" list-group-numbered overflow-scroll container d-flex  " style="overflow-y: hidden !important;">
-            <li class=" px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/dunny-point-marine-camp-beyt-dwarka"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4483d70.jpg" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4483d70.jpg 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4483d70.jpg 2x" class="rounded-3"></a></li>
-            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/kedarkantha-snow-trek-uttrakhand"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/64dedb0.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/64dedb0.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/64dedb0.png 2x" class="rounded-3"></a></li>
-            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/jaisalmer-desert-camping-jaisalmer"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/6f05d4d.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/6f05d4d.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/6f05d4d.png 2x" class="rounded-3"></a></li>
-            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/dalhousie-winter-trekking-expedition-himachal-pradesh"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/1902555.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/1902555.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/1902555.png 2x" class="rounded-3"></a></li>
-            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/magical-maharashtra"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/f8030c1.jpg" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/f8030c1.jpg 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/f8030c1.jpg 2x" class="rounded-3"></a></li>
-            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/snow-trekking-in-manali-manali"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/9973111.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/9973111.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/9973111.png 2x" class="rounded-3"></a></li>
-            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/white-rann-of-kutch-white-desert"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/0213804.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/0213804.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/0213804.png 2x" class="rounded-3"></a></li>
-            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/kasol-manali"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/63f6922.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/63f6922.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/63f6922.png 2x" class="rounded-3"></a></li>
-            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/discover-the-dangs-dang"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/c046616.jpg" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/c046616.jpg 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/c046616.jpg 2x" class="rounded-3"></a></li>
-            <li class="px-4 event_5esi1 mr-5"><a href="https://invinciblengo.org/events/explore-himalayas-visit-amritsar-manali"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/cc6bbfb.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/cc6bbfb.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/cc6bbfb.png 2x" class="rounded-3"></a></li>
+            <?php
+
+            include("./Admin_Tourism/pages/dbConfig.php");
+            $sql = "Select * from `tour_packaes` WHERE unique_id = '1' ";
+
+            $result = mysqli_query($conn, $sql);
+
+            while ($row = mysqli_fetch_assoc($result)) {
+
+              $images = $row['Upload_image'];
+              $title = $row['Tour_Title'];
+              $sub = $row['sub_title'];
+              $id = $row['id'];
+
+            ?>
+              <li class=" px-4 event_5esi1 mr-5"><a href="./packages/display_package.php?id=<?php echo $id; ?>" target="_blank">
+                  <img loading="lazy" src="./Admin_Tourism/pages/packages/images/<?php echo $images; ?>" srcset="./Admin_Tourism/pages/packages/images/<?php echo $images; ?>" class="rounded-3"></a>
+              </li>
+            <?php
+            }
+            ?>
           </ul>
         </div>
       </div>
@@ -170,218 +188,169 @@ include("./Admin_Tourism/pages/Visitor.php");
     <!-- Diwali Events -->
 
     <section>
-      <div class="container bg-light rounded-3">
+      <div class="container bg-light ">
         <div class="container">
           <div class="py-6">
             <h2 class="h3 text-primary mb-1">Diwali Events</h2>
             <p class="text-secondary mb-4"></p>
             <div class="overflow-scroll container d-flex " style="overflow-y: hidden !important;">
 
-              <div class=" px-3 event_1b27v "><a href="https://invinciblengo.org/events/jaisalmer-desert-camping-jaisalmer"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/754722c.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/754722c.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/754722c.png 2x" class="rounded-3">
+              <?php
 
-                </a></div>
-              <div class=" px-3 event_1b27v "><a href="https://invinciblengo.org/events/dunny-point-marine-camp-beyt-dwarka"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/aae1ea4.jpg" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/aae1ea4.jpg 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/aae1ea4.jpg 2x" class="rounded-3">
+              include("./Admin_Tourism/pages/dbConfig.php");
+              $sql = "Select * from `tour_packaes` WHERE unique_id = '2' ";
 
-                </a></div>
-              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/white-rann-of-kutch-white-desert"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/013a623.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/013a623.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/013a623.png 2x" class="rounded-3">
+              $result = mysqli_query($conn, $sql);
 
-                </a></div>
-              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/beyt-dwarka-beach-camping"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/7340a96.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/7340a96.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/7340a96.png 2x" class="rounded-3">
+              while ($row = mysqli_fetch_assoc($result)) {
 
-                </a></div>
-              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/magical-maharashtra"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/43a5de9.jpg" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/43a5de9.jpg 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/43a5de9.jpg 2x" class="rounded-3">
+                $images = $row['Upload_image'];
+                $title = $row['Tour_Title'];
+                $sub = $row['sub_title'];
+                $id = $row['id'];
 
-                </a></div>
-              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/bakor-nature-camp-mahisagar"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/2128fb1.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/2128fb1.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/2128fb1.png 2x" class="rounded-3">
+              ?>
+                <div class=" px-4 event_5esi1 mr-5"><a href="./packages/display_package.php?id=<?php echo $id; ?>" target="_blank"><img loading="lazy" src="./Admin_Tourism/pages/packages/images/<?php echo $images; ?>" srcset="./Admin_Tourism/pages/packages/images/<?php echo $images; ?>" class="rounded-3"></a></div>
 
-                </a></div>
-              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/saputara-adventure-camp-saputara-hill-station-the-danges-south-gujarat"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/ad7a1ea.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/ad7a1ea.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/ad7a1ea.png 2x" class="rounded-3">
-
-                </a></div>
-              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/manali-trekking-expedition-himachal-pradesh"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/05aa5cd.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/05aa5cd.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/05aa5cd.png 2x" class="rounded-3">
-
-                </a></div>
-              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/polo-forest-trekking-camp-north-gujarat"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/a859d99.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/a859d99.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/a859d99.png 2x" class="rounded-3">
-
-                </a></div>
+              <?php
+              }
+              ?>
+              </a>
             </div>
+
           </div>
         </div>
       </div>
+
 
 
     </section>
 
     <!-- weekend section  -->
-
     <section>
-
-      <div class="container bg-light rounded-3">
+      <div class="container bg-light ">
         <div class="container">
           <div class="py-6">
-            <h2 class="h3 text-primary mb-1">Weekend Events</h2>
+            <h2 class="h3 text-primary mb-1">weekend Events</h2>
             <p class="text-secondary mb-4"></p>
             <div class="overflow-scroll container d-flex " style="overflow-y: hidden !important;">
-              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/magical-maharashtra"><img alt="Magical Maharashtra" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/094303a.jpg" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/094303a.jpg 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/094303a.jpg 2x" class=" rounded-3">
-                  <div class=" text-center title_2A6MW mt-3">
-                    Magical Maharashtra
-                  </div>
-                </a></div>
-              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/bakor-nature-camp-mahisagar"><img alt="Bakor" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4441d39.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4441d39.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4441d39.png 2x" class=" rounded-3">
-                  <div class=" text-center title_2A6MW mt-3">
-                    Bakor
-                  </div>
-                </a></div>
-              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/discover-the-dangs-dang"><img alt="Discover the Dangs" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/73f8e60.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/73f8e60.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/73f8e60.png 2x" class=" rounded-3">
-                  <div class=" text-center title_2A6MW mt-3">
-                    Discover the Dangs
-                  </div>
-                </a></div>
-              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/polo-forest-trekking-camp-north-gujarat"><img alt="Polo Forest" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/709c09a.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/709c09a.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/709c09a.png 2x" class=" rounded-3">
-                  <div class=" text-center title_2A6MW mt-3">
-                    Polo Forest
-                  </div>
-                </a></div>
-              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/saputara-adventure-camp-saputara-hill-station-the-danges-south-gujarat"><img alt="Saputara" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/10246b2.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/10246b2.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/10246b2.png 2x" class=" rounded-3">
-                  <div class=" text-center title_2A6MW mt-3">
-                    Saputara
-                  </div>
-                </a></div>
-              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/bakor-1-day-trek-mahisagar"><img alt="Bakor 1 Day" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/32e516b.jpg" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/32e516b.jpg 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/32e516b.jpg 2x" class=" rounded-3">
-                  <div class=" text-center title_2A6MW mt-3">
-                    Bakor 1 Day
-                  </div>
-                </a></div>
+
+              <?php
+
+              include("./Admin_Tourism/pages/dbConfig.php");
+              $sql = "Select * from `tour_packaes` WHERE unique_id = '3' ";
+
+              $result = mysqli_query($conn, $sql);
+
+              while ($row = mysqli_fetch_assoc($result)) {
+
+                $images = $row['Upload_image'];
+                $title = $row['Tour_Title'];
+                $sub = $row['sub_title'];
+                $id = $row['id'];
+
+              ?>
+                <div class=" px-4 event_5esi1 mr-5"><a href="./packages/display_package.php?id=<?php echo $id; ?> " target="_blank"><img loading="lazy" src="./Admin_Tourism/pages/packages/images/<?php echo $images; ?>" srcset="./Admin_Tourism/pages/packages/images/<?php echo $images; ?>" class="rounded-3"></a></div>
+
+              <?php
+              }
+              ?>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- snow Events -->
+
+      <section>
+        <div class="container bg-light ">
+          <div class="container">
+            <div class="py-6">
+              <h2 class="h3 text-primary mb-1">Snow Events</h2>
+              <p class="text-secondary mb-4"></p>
+              <div class="overflow-scroll container d-flex " style="overflow-y: hidden !important;">
+
+                <?php
+
+                include("./Admin_Tourism/pages/dbConfig.php");
+                $sql = "Select * from `tour_packaes` WHERE unique_id = '4' ";
+
+                $result = mysqli_query($conn, $sql);
+
+                while ($row = mysqli_fetch_assoc($result)) {
+
+                  $images = $row['Upload_image'];
+                  $title = $row['Tour_Title'];
+                  $sub = $row['sub_title'];
+                  $id = $row['id'];
+
+                ?>
+                  <div class=" px-4 event_5esi1 mr-5"><a href="./packages/display_package.php?id=<?php echo $id; ?>" target="_blank"><img loading="lazy" src="./Admin_Tourism/pages/packages/images/<?php echo $images; ?>" srcset="./Admin_Tourism/pages/packages/images/<?php echo $images; ?>" class="rounded-3"></a></div>
+
+                <?php
+                }
+                ?>
+                </a>
+              </div>
+
             </div>
           </div>
         </div>
-      </div>
-    </section>
+  </div>
 
 
-    <!-- snow Events -->
 
-    <section>
+  <!-- All Events -->
 
-      <div class="container bg-light rounded-3">
-        <div class="container">
-          <div class="py-6">
-            <h2 class="h3 text-primary mb-1">Snow Events</h2>
-            <p class="text-secondary mb-4"></p>
-            <div class="overflow-scroll container d-flex" style="overflow-y: hidden !important;">
-              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/brahmatal-trek"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/db0648d.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/db0648d.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/db0648d.png 2x" class="rounded-3">
+  <section>
+    <div class="container bg-light ">
+      <div class="container">
+        <div class="py-6">
+          <h2 class="h3 text-primary mb-1">All Events</h2>
+          <p class="text-secondary mb-4"></p>
+          <div class="overflow-scroll container d-flex " style="overflow-y: hidden !important;">
 
-                </a></div>
-              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/dalhousie-winter-trekking-expedition-himachal-pradesh"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/f1eb5e2.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/f1eb5e2.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/f1eb5e2.png 2x" class="rounded-3">
+            <?php
 
-                </a></div>
-              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/kedarkantha-snow-trek-uttrakhand"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/320e06e.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/320e06e.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/320e06e.png 2x" class="rounded-3">
+            include("./Admin_Tourism/pages/dbConfig.php");
+            $sql = "Select * from `tour_packaes`  ";
 
-                </a></div>
-              <div class=" px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/snow-trekking-in-manali-manali"><img loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/13a769b.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/13a769b.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/13a769b.png 2x" class="rounded-3">
+            $result = mysqli_query($conn, $sql);
 
-                </a></div>
-            </div>
+            while ($row = mysqli_fetch_assoc($result)) {
+
+              $images = $row['Upload_image'];
+              $title = $row['Tour_Title'];
+              $sub = $row['sub_title'];
+              $id = $row['id'];
+
+            ?>
+              <div class=" px-4 event_5esi1 mr-5"><a href="./packages/display_package.php?id=<?php echo $id; ?>" target="_blank"><img loading="lazy" src="./Admin_Tourism/pages/packages/images/<?php echo $images; ?>" srcset="./Admin_Tourism/pages/packages/images/<?php echo $images; ?>" class="rounded-3"></a></div>
+
+            <?php
+            }
+            ?>
+            </a>
           </div>
         </div>
       </div>
 
-    </section>
 
-
-    <!-- Monsoon Events -->
-
-
-    <section>
-      <div class="container bg-light rounded-3">
-        <div class="container">
-          <div class="py-6">
-            <h2 class="h3 text-primary mb-1">Monsoon Events</h2>
-            <p class="text-secondary mb-4"></p>
-            <div class="overflow-scroll container d-flex" style="overflow-y: hidden !important;">
-              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/saputara-adventure-camp-saputara-hill-station-the-danges-south-gujarat"><img alt="Saputara" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/10246b2.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/10246b2.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/10246b2.png 2x" class="rounded-3">
-                  <div class=" text-center title_2A6MW mt-3">
-                    Saputara
-                  </div>
-                </a></div>
-              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/polo-forest-trekking-camp-north-gujarat"><img alt="Polo Forest" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/709c09a.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/709c09a.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/709c09a.png 2x" class="rounded-3">
-                  <div class=" text-center title_2A6MW mt-3">
-                    Polo Forest
-                  </div>
-                </a></div>
-              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/magical-maharashtra"><img alt="Magical Maharashtra" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/acf7800.jpg" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/acf7800.jpg 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/acf7800.jpg 2x" class="rounded-3">
-                  <div class=" text-center title_2A6MW mt-3">
-                    Magical Maharashtra
-                  </div>
-                </a></div>
-              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/bakor-nature-camp-mahisagar"><img alt="Bakor" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4441d39.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4441d39.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/4441d39.png 2x" class="rounded-3">
-                  <div class=" text-center title_2A6MW mt-3">
-                    Bakor
-                  </div>
-                </a></div>
-              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/kasol-manali"><img alt="Kasol + Manali" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/ab85ca9.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/ab85ca9.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/ab85ca9.png 2x" class="rounded-3">
-                  <div class=" text-center title_2A6MW mt-3">
-                    Kasol + Manali
-                  </div>
-                </a></div>
-              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/explore-himalayas-visit-amritsar-manali"><img alt="Explore Himalayas" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/350d482.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/350d482.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/350d482.png 2x" class="rounded-3">
-                  <div class=" text-center title_2A6MW mt-3">
-                    Explore Himalayas
-                  </div>
-                </a></div>
-              <div class="  px-3 event_1b27v mr-5"><a href="https://invinciblengo.org/events/manali-trekking-expedition-himachal-pradesh"><img alt="Manali" loading="lazy" src="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/812e288.png" srcset="https://img.invinciblengo.org/iconscout/f:jpeg/w:200/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/812e288.png 1x, https://img.invinciblengo.org/iconscout/f:jpeg/w:400/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/812e288.png 2x" class="rounded-3">
-                  <div class=" text-center title_2A6MW mt-3">
-                    Manali
-                  </div>
-                </a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
 
 
 
-    <!-- <section>
-      <h1 class=" my-3 mb- text-lg-center">Highlighted Events</h1>
-      <h3 class="text-lg-center"> Recommended camps by our Instructors</h3>
-
-      <div id="carouselExampleIndicators" class="carousel slide w-75  ms-11" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./assets/img/city-profile.jpg" class=" rounded-3 d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./assets/img/bg.jpg" class=" rounded-3 d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./assets/img/city-profile.jpg" class=" rounded-3 d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section> -->
 
 
 
-    <!-- <section>
-      <h3 class=" my-3 mb- text-lg-center">Diwali Events</h3>
 
 
 
-    </section> -->
+
 
 
 
@@ -517,289 +486,289 @@ include("./Admin_Tourism/pages/Visitor.php");
       </div>
 
     </section>
-  </div>
+    </div>
 
 
 
 
-  <footer class="footer pt-5 mt-5">
-    <div class="container">
-      <div class=" row">
-        <div class="col-md-3 mb-4 ms-auto">
-          <div>
-            <a href="https://www.creative-tim.com/product/material-kit">
-              <img src="./assets/img/logo-ct-dark.png" class="mb-3 footer-logo" alt="main_logo">
-            </a>
-            <h6 class="font-weight-bolder mb-4">Material Kit 2</h6>
+    <footer class="footer pt-5 mt-5">
+      <div class="container">
+        <div class=" row">
+          <div class="col-md-3 mb-4 ms-auto">
+            <div>
+              <a href="https://www.creative-tim.com/product/material-kit">
+                <img src="./assets/img/logo-ct-dark.png" class="mb-3 footer-logo" alt="main_logo">
+              </a>
+              <h6 class="font-weight-bolder mb-4">Material Kit 2</h6>
+            </div>
+            <div>
+              <ul class="d-flex flex-row ms-n3 nav">
+                <li class="nav-item">
+                  <a class="nav-link pe-1" href="https://www.facebook.com/CreativeTim" target="_blank">
+                    <i class="fab fa-facebook text-lg opacity-8"></i>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link pe-1" href="https://twitter.com/creativetim" target="_blank">
+                    <i class="fab fa-twitter text-lg opacity-8"></i>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link pe-1" href="https://dribbble.com/creativetim" target="_blank">
+                    <i class="fab fa-dribbble text-lg opacity-8"></i>
+                  </a>
+                </li>
+
+
+                <li class="nav-item">
+                  <a class="nav-link pe-1" href="https://github.com/creativetimofficial" target="_blank">
+                    <i class="fab fa-github text-lg opacity-8"></i>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link pe-1" href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w" target="_blank">
+                    <i class="fab fa-youtube text-lg opacity-8"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <ul class="d-flex flex-row ms-n3 nav">
-              <li class="nav-item">
-                <a class="nav-link pe-1" href="https://www.facebook.com/CreativeTim" target="_blank">
-                  <i class="fab fa-facebook text-lg opacity-8"></i>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link pe-1" href="https://twitter.com/creativetim" target="_blank">
-                  <i class="fab fa-twitter text-lg opacity-8"></i>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link pe-1" href="https://dribbble.com/creativetim" target="_blank">
-                  <i class="fab fa-dribbble text-lg opacity-8"></i>
-                </a>
-              </li>
 
 
-              <li class="nav-item">
-                <a class="nav-link pe-1" href="https://github.com/creativetimofficial" target="_blank">
-                  <i class="fab fa-github text-lg opacity-8"></i>
-                </a>
-              </li>
 
-              <li class="nav-item">
-                <a class="nav-link pe-1" href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w" target="_blank">
-                  <i class="fab fa-youtube text-lg opacity-8"></i>
-                </a>
-              </li>
-            </ul>
+          <div class="col-md-2 col-sm-6 col-6 mb-4">
+            <div>
+              <h6 class="text-sm">Company</h6>
+              <ul class="flex-column ms-n3 nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.creative-tim.com/presentation" target="_blank">
+                    About Us
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.creative-tim.com/templates/free" target="_blank">
+                    Freebies
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.creative-tim.com/templates/premium" target="_blank">
+                    Premium Tools
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.creative-tim.com/blog" target="_blank">
+                    Blog
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
 
+          <div class="col-md-2 col-sm-6 col-6 mb-4">
+            <div>
+              <h6 class="text-sm">Resources</h6>
+              <ul class="flex-column ms-n3 nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://iradesign.io/" target="_blank">
+                    Illustrations
+                  </a>
+                </li>
 
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.creative-tim.com/bits" target="_blank">
+                    Bits & Snippets
+                  </a>
+                </li>
 
-        <div class="col-md-2 col-sm-6 col-6 mb-4">
-          <div>
-            <h6 class="text-sm">Company</h6>
-            <ul class="flex-column ms-n3 nav">
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/presentation" target="_blank">
-                  About Us
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/templates/free" target="_blank">
-                  Freebies
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/templates/premium" target="_blank">
-                  Premium Tools
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/blog" target="_blank">
-                  Blog
-                </a>
-              </li>
-            </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.creative-tim.com/affiliates/new" target="_blank">
+                    Affiliate Program
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <div class="col-md-2 col-sm-6 col-6 mb-4">
-          <div>
-            <h6 class="text-sm">Resources</h6>
-            <ul class="flex-column ms-n3 nav">
-              <li class="nav-item">
-                <a class="nav-link" href="https://iradesign.io/" target="_blank">
-                  Illustrations
-                </a>
-              </li>
+          <div class="col-md-2 col-sm-6 col-6 mb-4">
+            <div>
+              <h6 class="text-sm">Help & Support</h6>
+              <ul class="flex-column ms-n3 nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.creative-tim.com/contact-us" target="_blank">
+                    Contact Us
+                  </a>
+                </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/bits" target="_blank">
-                  Bits & Snippets
-                </a>
-              </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.creative-tim.com/knowledge-center" target="_blank">
+                    Knowledge Center
+                  </a>
+                </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/affiliates/new" target="_blank">
-                  Affiliate Program
-                </a>
-              </li>
-            </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://services.creative-tim.com/?ref=ct-mk2-footer" target="_blank">
+                    Custom Development
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.creative-tim.com/sponsorships" target="_blank">
+                    Sponsorships
+                  </a>
+                </li>
+
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <div class="col-md-2 col-sm-6 col-6 mb-4">
-          <div>
-            <h6 class="text-sm">Help & Support</h6>
-            <ul class="flex-column ms-n3 nav">
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/contact-us" target="_blank">
-                  Contact Us
-                </a>
-              </li>
+          <div class="col-md-2 col-sm-6 col-6 mb-4 me-auto">
+            <div>
+              <h6 class="text-sm">Legal</h6>
+              <ul class="flex-column ms-n3 nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.creative-tim.com/knowledge-center/terms-of-service" target="_blank">
+                    Terms & Conditions
+                  </a>
+                </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/knowledge-center" target="_blank">
-                  Knowledge Center
-                </a>
-              </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.creative-tim.com/knowledge-center/privacy-policy" target="_blank">
+                    Privacy Policy
+                  </a>
+                </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="https://services.creative-tim.com/?ref=ct-mk2-footer" target="_blank">
-                  Custom Development
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/sponsorships" target="_blank">
-                  Sponsorships
-                </a>
-              </li>
-
-            </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.creative-tim.com/license" target="_blank">
+                    Licenses (EULA)
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <div class="col-md-2 col-sm-6 col-6 mb-4 me-auto">
-          <div>
-            <h6 class="text-sm">Legal</h6>
-            <ul class="flex-column ms-n3 nav">
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/knowledge-center/terms-of-service" target="_blank">
-                  Terms & Conditions
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/knowledge-center/privacy-policy" target="_blank">
-                  Privacy Policy
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.creative-tim.com/license" target="_blank">
-                  Licenses (EULA)
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-12">
-          <div class="text-center">
-            <p class="text-dark my-4 text-sm font-weight-normal">
-              All rights reserved. Copyright ©
-              <script>
-                document.write(new Date().getFullYear())
-              </script> Material Kit by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
-            </p>
+          <div class="col-12">
+            <div class="text-center">
+              <p class="text-dark my-4 text-sm font-weight-normal">
+                All rights reserved. Copyright ©
+                <script>
+                  document.write(new Date().getFullYear())
+                </script> Material Kit by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+              </p>
+            </div>
           </div>
         </div>
       </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--   Core JS Files   -->
+    <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+    <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+
+
+
+
+    <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+    <script src="./assets/js/plugins/countup.min.js"></script>
+
+
+
+
+
+    <script src="./assets/js/plugins/choices.min.js"></script>
+
+
+
+    <script src="./assets/js/plugins/prism.min.js"></script>
+    <script src="./assets/js/plugins/highlight.min.js"></script>
+
+
+
+    <!--  Plugin for Parallax, full documentation here: https://github.com/dixonandmoe/rellax -->
+    <script src="./assets/js/plugins/rellax.min.js"></script>
+    <!--  Plugin for TiltJS, full documentation here: https://gijsroge.github.io/tilt.js/ -->
+    <script src="./assets/js/plugins/tilt.min.js"></script>
+    <!--  Plugin for Selectpicker - ChoicesJS, full documentation here: https://github.com/jshjohnson/Choices -->
+    <script src="./assets/js/plugins/choices.min.js"></script>
+
+
+    <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+    <script src="./assets/js/plugins/parallax.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
+    <!--  Google Maps Plugin    -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+    <script src="./assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+      if (document.getElementById('state1')) {
+        const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+        if (!countUp.error) {
+          countUp.start();
+        } else {
+          console.error(countUp.error);
+        }
+      }
+      if (document.getElementById('state2')) {
+        const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+        if (!countUp1.error) {
+          countUp1.start();
+        } else {
+          console.error(countUp1.error);
+        }
+      }
+      if (document.getElementById('state3')) {
+        const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+        if (!countUp2.error) {
+          countUp2.start();
+        } else {
+          console.error(countUp2.error);
+        };
+      }
+    </script>
+
+    <!-- typing latter in js -->
+
+    <script src="animate typing latter.js"></script>
     </div>
-  </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!--   Core JS Files   -->
-  <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
-  <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-  <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
-
-
-
-
-  <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
-  <script src="./assets/js/plugins/countup.min.js"></script>
-
-
-
-
-
-  <script src="./assets/js/plugins/choices.min.js"></script>
-
-
-
-  <script src="./assets/js/plugins/prism.min.js"></script>
-  <script src="./assets/js/plugins/highlight.min.js"></script>
-
-
-
-  <!--  Plugin for Parallax, full documentation here: https://github.com/dixonandmoe/rellax -->
-  <script src="./assets/js/plugins/rellax.min.js"></script>
-  <!--  Plugin for TiltJS, full documentation here: https://gijsroge.github.io/tilt.js/ -->
-  <script src="./assets/js/plugins/tilt.min.js"></script>
-  <!--  Plugin for Selectpicker - ChoicesJS, full documentation here: https://github.com/jshjohnson/Choices -->
-  <script src="./assets/js/plugins/choices.min.js"></script>
-
-
-  <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
-  <script src="./assets/js/plugins/parallax.min.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
-  <!--  Google Maps Plugin    -->
-
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
-  <script src="./assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
-
-
-  <script type="text/javascript">
-    if (document.getElementById('state1')) {
-      const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
-      if (!countUp.error) {
-        countUp.start();
-      } else {
-        console.error(countUp.error);
-      }
-    }
-    if (document.getElementById('state2')) {
-      const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
-      if (!countUp1.error) {
-        countUp1.start();
-      } else {
-        console.error(countUp1.error);
-      }
-    }
-    if (document.getElementById('state3')) {
-      const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
-      if (!countUp2.error) {
-        countUp2.start();
-      } else {
-        console.error(countUp2.error);
-      };
-    }
-  </script>
-
-  <!-- typing latter in js -->
-
-  <script src="animate typing latter.js"></script>
-
 </body>
 
 </html>

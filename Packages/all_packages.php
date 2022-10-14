@@ -22,6 +22,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
     <link id="pagestyle" href="../assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+    <style>
+        .form-control {
+            border: 1px solid #b3a1a1 !important;
+            padding: 8px 10px !important;
+        }
+    </style>
 </head>
 
 <body class="blog-author bg-gray-200">
@@ -59,8 +65,8 @@
     <!-- End Navbar -->
     <!-- -------- START HEADER 4 w/ search book a ticket form ------- -->
     <header>
-        <div class="page-header min-height-400" style="background-image: url('../assets/img/city-profile.jpg');" loading="lazy">
-            <span class="mask bg-gradient-dark opacity-8"></span>
+        <div class="page-header min-height-400" style="background-image: url('https://img.invinciblengo.org/iconscout/f:jpeg/w:2000/h:0/rt:fit/plain/https://invinciblengo.org/_nuxt/img/13eaaff.jpg');" loading="lazy">
+            <span class="mask bg-gradient-dark opacity-0"></span>
         </div>
     </header>
     <!-- -------- END HEADER 4 w/ search book a ticket form ------- -->
@@ -70,10 +76,53 @@
         <section class="p-5">
             <div class="container">
                 <div class="row">
+
                     <div class="col-lg-6">
                         <h3 class="mb-5">All Packages</h3>
                     </div>
+                    <!-- dropdown -->
+
+                    <div class="container col-md-6">
+                        <div class="row">
+                            <div class="col-3 mt-4 mx-auto">
+                                <?php
+                                include("../Admin_Tourism/pages/dbConfig.php");
+                                ?>
+                                <select class="form-control" name="choice-button" id="choice-button" placeholder="Language">
+                                    <option value="<?php echo $cname; ?>" name="category" selected>All Event</option>
+                                    <?php
+                                    $sql = "Select * from `category` ";
+
+                                    $result = mysqli_query($conn, $sql);
+
+                                    $myid = 0;
+                                    while ($row = mysqli_fetch_assoc($result)) {
+
+                                        $myid++;
+                                        $category_id = $row['category_id'];
+                                        $cname = $row['cname'];
+
+                                    ?> <option value="<?php echo $category_id; ?>"><?php 
+                                                                                    echo $cname; ?></option>
+                                    <?php
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- mandatory scripts -->
+                    <script src="../assets/js/plugins/choices.min.js"></script>
+                    <script>
+                        if (document.getElementById("choices-button")) {
+                            var element = document.getElementById("choices-button");
+                            const example = new Choices(element, {});
+                        }
+                    </script>
                 </div>
+
                 <div class="row">
                     <?php
 
@@ -104,7 +153,7 @@
                                     <p>
                                         <?php echo $sub; ?>
                                     </p>
-                                    <a href="javascript:;" class="text-info text-sm icon-move-right">Read More
+                                    <a href="javascript:;" class="text-info text-sm icon-move-right">Book now
                                         <i class="fas fa-arrow-right text-xs ms-1"></i>
                                     </a>
                                 </div>

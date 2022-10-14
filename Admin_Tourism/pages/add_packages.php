@@ -180,6 +180,13 @@
 
                                     </div>
 
+                                    <div class="col-md-12">
+
+                                        <label for="">Background image</label>
+                                        <input type="file" class="form-control" name="bgimg" id="">
+
+                                    </div>
+
 
                                     <div class="cal-md-12 ms-1">
                                         <button class="btn btn-primary" name="add_category_btn">Save</button>
@@ -224,12 +231,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $aboute = $_POST['About'];
     $ukey = $_POST['choice-button'];
 
+    $bgimg = $_FILES['bgimg']['name'];
+    $tempname = $_FILES['bgimg']["tmp_name"];
+    $folder = "./packages/images/" . $bgimg;
+
     $image = $_FILES['image']['name'];
     $tempname = $_FILES["image"]["tmp_name"];
     $folder = "./packages/images/" . $image;
 
 
-    $sql = "INSERT INTO tour_packaes  ( Upload_image , Tour_Title, sub_title , Duration , Difficulty, Age_Group,  Altitude,  About, unique_id  ) VALUES ( '$image','$title' ,'$sub', '$duration', '$difficulty' ,'$age' ,'$altitude' , '$aboute', '$ukey' ) ;";
+    $sql = "INSERT INTO tour_packaes  ( Upload_image , Tour_Title, sub_title , Duration , Difficulty, Age_Group,  Altitude,  About, unique_id , bg_img ) VALUES ( '$image','$title' ,'$sub', '$duration', '$difficulty' ,'$age' ,'$altitude' , '$aboute', '$ukey' , '$bgimg' ) ;";
 
 
 

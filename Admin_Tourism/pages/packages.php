@@ -134,6 +134,7 @@
                         <th scope="col">About</th>
                         <th scope="col">Category</th>
                         <th scope="col">images</th>
+                        <th scopr="col">Background img</th>
 
 
                         <th scope="col"></th>
@@ -162,6 +163,7 @@
                         $Altitude = $row['Altitude'];
                         $about = $row['About'];
                         $images = $row['Upload_image'];
+                        $bgimg = $row['bg_img'];
                         // $ukey = get_cetegory( $row['unique_id'] );
                         $ukey = $row['unique_id'];
 
@@ -179,6 +181,9 @@
                             <td>$about </td>
                             <td>$ukey </td>
                             <td ><img src='./packages/images/$images'><td>
+                            <td ><img src='./packages/images/$bgimg'><td>
+
+
                             <td>
                             <a href='update_packages.php?updateid=$id' type='button' name='snoEdit'   <i class='fa-solid fa-pen-to-square ' aria-hidden='true'></i>  </a>
                             <a href='delete_packages.php?deleteid=$id' type='button' name='delete' style='margin-left:20px' <i class='fa-sharp fa-solid fa-trash ' aria-hidden='true'></i></a>

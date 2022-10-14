@@ -8,11 +8,13 @@ $result = mysqli_query($conn, $sql);
 while ($row = mysqli_fetch_assoc($result)) {
 
     $title = $row["Tour_Title"];
+    $sub = $row["sub_title"];
     $duration = $row["Duration"];
     $difficulty = $row["Difficulty"];
     $age = $row["Age_Group"];
     $alt = $row["Altitude"];
     $img = $row["Upload_image"];
+    $bgimg = $row["bg_img"];
 
     $about = $row['About'];
 }
@@ -30,7 +32,9 @@ while ($row = mysqli_fetch_assoc($result)) {
         Home -AdventureoryX
 
     </title>
-    <!--     Fonts and icons     -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
 
     <!-- Nucleo Icons -->
@@ -40,6 +44,8 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
@@ -47,6 +53,15 @@ while ($row = mysqli_fetch_assoc($result)) {
     <!-- CSS Files -->
     <link id="pagestyle" href="../assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
     <linl id="pagestyle" href="../assets/css/me.css" rel="stylesheet"></linl>
+    <style>
+        .modal-backdrop {
+            display: none;
+        }
+
+        .modal {
+            z-index: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -84,14 +99,13 @@ while ($row = mysqli_fetch_assoc($result)) {
     </nav>
     <!-- End Navbar -->
     <header class="position-relative">
-        <div class="page-header min-vh-75 position-relative" style="background-image: url('https://images.unsplash.com/photo-1460794418188-1bb7dba2720d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80');" loading="lazy">
-            <span class="mask bg-gradient-dark opacity-6"></span>
+        <div class="page-header min-vh-75 position-relative" style="background-image: url(../Admin_Tourism/pages/packages/images/<?php echo $bgimg; ?>);" loading="lazy">
+            <span class="mask bg-gradient-dark opacity-2"></span>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 text-center mx-auto mt-md-n7">
-                        <h4 class="text-dark fadeIn1 fadeInBottom">Book Now</h4>
                         <h1 class="text-white fadeIn2 fadeInBottom"><?php echo $title; ?> </h1>
-                        <p class="lead mb-5 fadeIn3 fadeInBottom text-white opacity-8">Feel the thrill of Beach Camping!
+                        <p class="lead mb-5 fadeIn3 fadeInBottom text-white opacity-8"><?php echo $sub; ?>
                         </p>
                         <button type="submit" class="btn bg-white me-2 fadeIn1 fadeInBottom">Book ticket</button>
                     </div>
@@ -150,11 +164,89 @@ while ($row = mysqli_fetch_assoc($result)) {
                 <div class="row text-center py-3 mt-3">
                     <div class="col-12 mx-auto">
 
-                        <button type="button" class="btn btn-outline-primary mb-0 mx-5">Book ticket</button>
-                        <button type="button" class="btn btn-outline-secondary mb-0">inquiry</button>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary mb-0 me-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Book ticket
+                        </button>
 
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-login" role="document">
+                                <div class="modal-content">
+                                    <div class="card card-signup card-plain">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="form" method="post" action="">
+                                                <p class="description text-center">Or Be Classical</p>
+                                                <div class="card-body">
+
+                                                    <div class="form-group bmd-form-group">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="material-icons">face</i>
+                                                            </span>
+                                                            <input type="text" class="form-control" placeholder="First Name" name="name">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group bmd-form-group">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="material-icons">email</i>
+                                                            </span>
+                                                            <input type="text" class="form-control" placeholder="Email" name="email">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group bmd-form-group">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                            </span>
+                                                            <input type="text" placeholder="enter persons" class="form-control" name="person">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Book</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <?php
+
+                            include("../Admin_Tourism/pages/dbConfig.php");
+
+                            if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+
+                                $name = $_POST['name'];
+                                $email = $_POST['email'];
+                                $person = $_POST['person'];
+
+                                $sql = " INSERT INTO `booking`( `name`, `email`, `person`) VALUES ('$name','$email','$person')";
+                                $result = mysqli_query($conn, $sql);
+
+                                if ($result) {
+                                    echo '<script>alert("data uploaded successfully!")</script>';
+                                } else {
+
+                                    echo '<script>alert("Failed to upload image!")</script>';
+                                }
+                            }
+
+
+                            ?>
+
+                            <button type="button" class="btn btn-outline-secondary mb-0">inquiry</button>
+
+                        </div>
                     </div>
-                </div>
             </section>
 
 
