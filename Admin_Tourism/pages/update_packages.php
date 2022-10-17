@@ -97,7 +97,7 @@ $sql = "SELECT * FROM `tour_packaes` WHERE "
                                     $Age =  $arrdata['Age_Group'];
                                     $Altitude =  $arrdata['Altitude'];
                                     $about =  $arrdata['About'];
-                                    $images =  $arrdata['Upload_image'];
+                                    $price = $arrdata['price'];
                                     $ukey = $arrdata['unique_id'];
 
 
@@ -113,25 +113,19 @@ $sql = "SELECT * FROM `tour_packaes` WHERE "
                                         $age = $_POST['Age_Group'];
                                         $altitude = $_POST['Altitude'];
                                         $aboute = $_POST['About'];
+                                        $price = $_POST['price'];
                                         $ukey = $_POST['unique_id'];
 
-                                        $image = $_FILES['image']['name'];
-                                        $tempname = $_FILES["image"]["tmp_name"];
-                                        $folder = "./packages/images/" . $image;
+                                       
 
 
-                                        $update = "UPDATE `tour_packaes` SET `Tour_Title`='$title',`sub_title`='$sub' ,`Duration`='$duration',`Difficulty`='$difficulty',`Age_Group`='$age',`Altitude`='$altitude',`About`='$aboute' ,`Upload_image`='$images',`unique_id`='$ukey' WHERE id = $idupdate;";
+                                        $update = "UPDATE `tour_packaes` SET `Tour_Title`='$title',`sub_title`='$sub' ,`Duration`='$duration',`Difficulty`='$difficulty',`Age_Group`='$age',`Altitude`='$altitude',`About`='$aboute' ,`unique_id`='$ukey' , `price` = '$price' WHERE id = $idupdate;";
 
 
 
                                         $result = mysqli_query($conn, $update);
 
-                                        if (move_uploaded_file($tempname, $folder)) {
-
-                                            echo '<script>alert("Image uploaded successfully!")</script>';
-                                        } else {
-                                            echo '<script>alert("Failed to upload image!")</script>';
-                                        }
+                                        
 
 
                                         if ($result) {
@@ -196,13 +190,27 @@ $sql = "SELECT * FROM `tour_packaes` WHERE "
                                         <input type="text" class="form-control" value="<?php echo $about; ?>" name="About">
 
                                     </div>
+                                    <div class="col-md-12">
+
+                                        <label for="">Price</label>
+                                        <input  type="text" class="form-control" value="<?php echo $price; ?>" name="price">
+
+                                    </div>
+
+                                    <!-- <div class="col-md-12">
+
+                                        <label for="">Upload image</label>
+                                        <input type="file" class="form-control" value="" name="image" id="">
+
+                                    </div>
 
                                     <div class="col-md-12">
 
-                                        <label for="">Upload image</label>
-                                        <input type="file" class="form-control" value="<?php echo $tempname; ?>" name="image" id="">
+                                        <label for="">Upload </label>
+                                        <input type="file" class="form-control" value="" name="image" id="">
 
-                                    </div>
+                                    </div> -->
+
 
 
                                     <div class="cal-md-12 ms-1">

@@ -143,7 +143,7 @@ require("dbConfig.php");
                             <td><a type='button' name='delete'   <i class='fa-solid fa-pen-to-square delete' aria-hidden='true'></i></a>
                             <a href='delete_users.php?deleteid=$id' type='button' name='snoEdit' style='margin-left:20px' <i class='fa-sharp fa-solid fa-trash edit' aria-hidden='true'></i></a></td>
                                                  
-                                                     
+                                                         
                             </tr>";
                         }
 

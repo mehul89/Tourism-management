@@ -32,6 +32,22 @@ include("./Admin_Tourism/pages/Visitor.php");
   <!-- CSS Files -->
   <link id="pagestyle" href="./assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
   <linl id="pagestyle" href="./assets/css/me.css" rel="stylesheet"></linl>
+
+  <style>
+    #list {
+      scrollbar-width: normal;
+      scrollbar-color: #777 #555;
+    }
+
+    #list::-webkit-scrollbar {
+      width: 4vw;
+    }
+
+    #list::-webkit-scrollbar-thumb {
+      background-color: #7775;
+    }
+
+  </style>
 </head>
 
 <body class="index-page bg-gray-200">
@@ -43,7 +59,7 @@ include("./Admin_Tourism/pages/Visitor.php");
       <div class="col-12">
         <nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
           <div class="container-fluid px-0">
-            <a class="navbar-brand font-weight-bolder ms-sm-3" href="index.html" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
+            <a class="navbar-brand font-weight-bolder ms-sm-3" href="index.php" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
               AdventureoryX
             </a>
             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,12 +75,12 @@ include("./Admin_Tourism/pages/Visitor.php");
 
 
 
-                <li class="nav-item ms-lg-auto">
+                <!-- <li class="nav-item ms-lg-auto">
                   <a class="nav-link nav-link-icon me-2" href="https://github.com/creativetimofficial/material-kit" target="_blank">
                     <i class="fa fa-github me-1"></i>
                     <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Star us on Github">Github</p>
                   </a>
-                </li>
+                </li> -->
                 <li class="nav-item my-auto ms-3 ms-lg-0">
 
                   <a href="./Admin_Tourism/pages/Contect_us.php" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0">Contect us</a>
@@ -99,7 +115,7 @@ include("./Admin_Tourism/pages/Visitor.php");
 
             <p class="lead text-white mt-3">Organized group trips & tours
               round the world </p>
-            <a href="../Tourism/Packages/all_packages.php" class="btn btn-white">Explore</a>
+            <a href="../Tourism/Packages/all_packages.php" target="_blanck" class="btn btn-white">Explore</a>
           </div>
         </div>
       </div>
@@ -148,16 +164,14 @@ include("./Admin_Tourism/pages/Visitor.php");
     <section>
       <div class="container  bg-light rounded-3 ">
 
-        <div class="float-right">
-          <a type="btn btn-primary" href="./Packages/all_packages.php" target="_blank">All Events</a>
-        </div>
+
         <div class="py-6">
-          <h2 class="h3 text-primary mb-1">Highlighted Events</h2>
-          <p class="text-secondary mb-4">
+          <h2 class="h3 text-primary mt-0 mb-3 d-flex justify-content-center  ">Highlighted Events</h2>
+          <p class="text-secondary mb-4 d-flex justify-content-center ">
             Recommended camps by our Instructors
           </p>
 
-          <ul class=" list-group-numbered overflow-scroll container d-flex  " style="overflow-y: hidden !important;">
+          <ul class=" list-group-numbered overflow-scroll container d-flex  " id="list" style="overflow-y: hidden !important;">
             <?php
 
             include("./Admin_Tourism/pages/dbConfig.php");
@@ -190,10 +204,10 @@ include("./Admin_Tourism/pages/Visitor.php");
     <section>
       <div class="container bg-light ">
         <div class="container">
-          <div class="py-6">
-            <h2 class="h3 text-primary mb-1">Diwali Events</h2>
-            <p class="text-secondary mb-4"></p>
-            <div class="overflow-scroll container d-flex " style="overflow-y: hidden !important;">
+          <div class="py-3">
+            <h2 class="h3 text-primary mt-0 mb-3 d-flex justify-content-center ">Diwali Events</h2>
+            <p class="text-secondary mb-4 d-flex justify-content-center"></p>
+            <div class="overflow-scroll container d-flex " id="list" style="overflow-y: hidden !important;">
 
               <?php
 
@@ -230,10 +244,10 @@ include("./Admin_Tourism/pages/Visitor.php");
     <section>
       <div class="container bg-light ">
         <div class="container">
-          <div class="py-6">
-            <h2 class="h3 text-primary mb-1">weekend Events</h2>
-            <p class="text-secondary mb-4"></p>
-            <div class="overflow-scroll container d-flex " style="overflow-y: hidden !important;">
+          <div class="py-3">
+            <h2 class="h3 text-primary mt-0 mb-3 d-flex justify-content-center ">weekend Events</h2>
+            <p class="text-secondary mb-4 d-flex justify-content-center"></p>
+            <div class="overflow-scroll container d-flex " id="list" style="overflow-y: hidden !important;">
 
               <?php
 
@@ -270,9 +284,9 @@ include("./Admin_Tourism/pages/Visitor.php");
         <div class="container bg-light ">
           <div class="container">
             <div class="py-6">
-              <h2 class="h3 text-primary mb-1">Snow Events</h2>
-              <p class="text-secondary mb-4"></p>
-              <div class="overflow-scroll container d-flex " style="overflow-y: hidden !important;">
+              <h2 class="h3 text-primary mt-0 mb-3 d-flex justify-content-center ">Snow Events</h2>
+              <p class="text-secondary mb-4 d-flex justify-content-center"></p>
+              <div class="overflow-scroll container d-flex " id="list" style="overflow-y: hidden !important;">
 
                 <?php
 
@@ -310,9 +324,11 @@ include("./Admin_Tourism/pages/Visitor.php");
     <div class="container bg-light ">
       <div class="container">
         <div class="py-6">
-          <h2 class="h3 text-primary mb-1">All Events</h2>
+          <a href="./Packages/all_packages.php" target="_blank" type="button" class="btn btn-sm  bg-gradient-primary h5 text-whate mb-1">
+            All Events
+          </a>
           <p class="text-secondary mb-4"></p>
-          <div class="overflow-scroll container d-flex " style="overflow-y: hidden !important;">
+          <div class="overflow-scroll container d-flex " id="list" style="overflow-y: hidden !important;">
 
             <?php
 
@@ -335,6 +351,8 @@ include("./Admin_Tourism/pages/Visitor.php");
             }
             ?>
             </a>
+
+
           </div>
         </div>
       </div>
@@ -479,7 +497,7 @@ include("./Admin_Tourism/pages/Visitor.php");
               <p class="text-white mb-5">Cause if you do, it can be yours for FREE. Hit the button below to navigate to
                 Creative Tim where you can find the Design System in HTML. Start a new project or give an old Bootstrap
                 project a new look!</p>
-              <a href="https://www.creative-tim.com/product/material-kit" class="btn btn-primary btn-lg mb-3 mb-sm-0">Download HTML</a>
+              <a href="" class="btn btn-primary btn-lg mb-3 mb-sm-0">Download HTML</a>
             </div>
           </div>
         </div>
@@ -496,7 +514,7 @@ include("./Admin_Tourism/pages/Visitor.php");
         <div class=" row">
           <div class="col-md-3 mb-4 ms-auto">
             <div>
-              <a href="https://www.creative-tim.com/product/material-kit">
+              <a href="index.php">
                 <img src="./assets/img/logo-ct-dark.png" class="mb-3 footer-logo" alt="main_logo">
               </a>
               <h6 class="font-weight-bolder mb-4">Material Kit 2</h6>
@@ -504,32 +522,32 @@ include("./Admin_Tourism/pages/Visitor.php");
             <div>
               <ul class="d-flex flex-row ms-n3 nav">
                 <li class="nav-item">
-                  <a class="nav-link pe-1" href="https://www.facebook.com/CreativeTim" target="_blank">
+                  <a class="nav-link pe-1" href="" target="_blank">
                     <i class="fab fa-facebook text-lg opacity-8"></i>
                   </a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link pe-1" href="https://twitter.com/creativetim" target="_blank">
+                  <a class="nav-link pe-1" href="" target="_blank">
                     <i class="fab fa-twitter text-lg opacity-8"></i>
                   </a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link pe-1" href="https://dribbble.com/creativetim" target="_blank">
+                  <a class="nav-link pe-1" href="" target="_blank">
                     <i class="fab fa-dribbble text-lg opacity-8"></i>
                   </a>
                 </li>
 
 
                 <li class="nav-item">
-                  <a class="nav-link pe-1" href="https://github.com/creativetimofficial" target="_blank">
+                  <a class="nav-link pe-1" href="" target="_blank">
                     <i class="fab fa-github text-lg opacity-8"></i>
                   </a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link pe-1" href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w" target="_blank">
+                  <a class="nav-link pe-1" href="" target="_blank">
                     <i class="fab fa-youtube text-lg opacity-8"></i>
                   </a>
                 </li>
@@ -544,84 +562,37 @@ include("./Admin_Tourism/pages/Visitor.php");
               <h6 class="text-sm">Company</h6>
               <ul class="flex-column ms-n3 nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="https://www.creative-tim.com/presentation" target="_blank">
+                  <a class="nav-link" href="" target="_blank">
                     About Us
                   </a>
                 </li>
 
-                <li class="nav-item">
-                  <a class="nav-link" href="https://www.creative-tim.com/templates/free" target="_blank">
-                    Freebies
-                  </a>
-                </li>
+               
 
-                <li class="nav-item">
-                  <a class="nav-link" href="https://www.creative-tim.com/templates/premium" target="_blank">
-                    Premium Tools
-                  </a>
-                </li>
+                
 
-                <li class="nav-item">
-                  <a class="nav-link" href="https://www.creative-tim.com/blog" target="_blank">
-                    Blog
-                  </a>
-                </li>
+                
               </ul>
             </div>
           </div>
 
-          <div class="col-md-2 col-sm-6 col-6 mb-4">
-            <div>
-              <h6 class="text-sm">Resources</h6>
-              <ul class="flex-column ms-n3 nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="https://iradesign.io/" target="_blank">
-                    Illustrations
-                  </a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link" href="https://www.creative-tim.com/bits" target="_blank">
-                    Bits & Snippets
-                  </a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link" href="https://www.creative-tim.com/affiliates/new" target="_blank">
-                    Affiliate Program
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          
 
           <div class="col-md-2 col-sm-6 col-6 mb-4">
             <div>
               <h6 class="text-sm">Help & Support</h6>
               <ul class="flex-column ms-n3 nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="https://www.creative-tim.com/contact-us" target="_blank">
+                  <a class="nav-link" href="./Admin_Tourism/pages/Contect_us.php" target="_blank">
                     Contact Us
                   </a>
                 </li>
 
-                <li class="nav-item">
-                  <a class="nav-link" href="https://www.creative-tim.com/knowledge-center" target="_blank">
-                    Knowledge Center
-                  </a>
-                </li>
+                
 
-                <li class="nav-item">
-                  <a class="nav-link" href="https://services.creative-tim.com/?ref=ct-mk2-footer" target="_blank">
-                    Custom Development
-                  </a>
-                </li>
+                
 
-                <li class="nav-item">
-                  <a class="nav-link" href="https://www.creative-tim.com/sponsorships" target="_blank">
-                    Sponsorships
-                  </a>
-                </li>
+                
 
               </ul>
             </div>
@@ -632,19 +603,19 @@ include("./Admin_Tourism/pages/Visitor.php");
               <h6 class="text-sm">Legal</h6>
               <ul class="flex-column ms-n3 nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="https://www.creative-tim.com/knowledge-center/terms-of-service" target="_blank">
+                  <a class="nav-link" href="" target="_blank">
                     Terms & Conditions
                   </a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="https://www.creative-tim.com/knowledge-center/privacy-policy" target="_blank">
+                  <a class="nav-link" href="" target="_blank">
                     Privacy Policy
                   </a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="https://www.creative-tim.com/license" target="_blank">
+                  <a class="nav-link" href="" target="_blank">
                     Licenses (EULA)
                   </a>
                 </li>
@@ -658,7 +629,7 @@ include("./Admin_Tourism/pages/Visitor.php");
                 All rights reserved. Copyright ©
                 <script>
                   document.write(new Date().getFullYear())
-                </script> Material Kit by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+                </script>Created by <a href="https://mehul-chapaneri-60605.web.app/" target="_blank">Mehul Chapaneri</a>.
               </p>
             </div>
           </div>

@@ -1,4 +1,28 @@
 <?php
+
+include('../Admin_Tourism/pages/dbConfig.php');
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $name = $_POST['fname'];
+    $email = $_POST['email'];
+    $person = $_POST['personlist'];
+
+    $sql = "INSERT INTO `booking`(`fname`, `email`, `person`) VALUES ('$name','$email','$person')";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result) {
+        echo '<script>alert("data uploaded successfully!")</script>';
+    } else {
+
+        echo '<script>alert("Failed to upload data!")</script>';
+    }
+}
+?>
+
+
+
+<?php
 include("../Admin_Tourism/pages/dbConfig.php");
 
 $id = $_REQUEST["id"];
@@ -15,6 +39,8 @@ while ($row = mysqli_fetch_assoc($result)) {
     $alt = $row["Altitude"];
     $img = $row["Upload_image"];
     $bgimg = $row["bg_img"];
+    $price = $row["price"];
+
 
     $about = $row['About'];
 }
@@ -43,9 +69,9 @@ while ($row = mysqli_fetch_assoc($result)) {
     <link rel="stylesheet" href="../assets/css/me.css">
 
     <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    <!-- JavaScript Bundle with Popper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"  />    <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
 
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
@@ -69,7 +95,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     <!-- Navbar Transparent -->
     <nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3  navbar-transparent ">
         <div class="container">
-            <a class="navbar-brand  text-white " href="https://demos.creative-tim.com/material-kit/presentation" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
+            <a class="navbar-brand  text-white " href="" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
                 AdventureoryX
             </a>
             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,7 +111,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 
                     <li class="nav-item ms-lg-auto">
-                        <a class="nav-link nav-link-icon me-2" href="https://github.com/creativetimofficial/soft-ui-design-system" target="_blank">
+                        <a class="nav-link nav-link-icon me-2" href="" target="_blank">
                             <i class="fa fa-github me-1"></i>
                             <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Star us on Github">Github</p>
                         </a>
@@ -126,7 +152,8 @@ while ($row = mysqli_fetch_assoc($result)) {
                     <div class="row text-center">
                         <div class="col-lg-3 col-md-6">
                             <div class="info">
-                                <i class="material-icons text-gradient text-primary text-5xl">room</i>
+                            <i class="fa-regular fa-calendar-day"></i>
+                                <!-- <i class="material-icons text-gradient text-primary text-5xl">room</i> -->
                                 <h5 class="mt-3">Duration</h5>
                                 <p class="font-weight-normal"><?php echo $duration; ?></p>
                             </div>
@@ -179,69 +206,57 @@ while ($row = mysqli_fetch_assoc($result)) {
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form class="form" method="post" action="">
-                                                <p class="description text-center">Or Be Classical</p>
-                                                <div class="card-body">
-
-                                                    <div class="form-group bmd-form-group">
-                                                        <div class="input-group">
-                                                            <span class="input-group-addon">
-                                                                <i class="material-icons">face</i>
-                                                            </span>
-                                                            <input type="text" class="form-control" placeholder="First Name" name="name">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group bmd-form-group">
-                                                        <div class="input-group">
-                                                            <span class="input-group-addon">
-                                                                <i class="material-icons">email</i>
-                                                            </span>
-                                                            <input type="text" class="form-control" placeholder="Email" name="email">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group bmd-form-group">
-                                                        <div class="input-group">
-                                                            <span class="input-group-addon">
-                                                            </span>
-                                                            <input type="text" placeholder="enter persons" class="form-control" name="person">
-                                                        </div>
-                                                    </div>
+                                            <form role="form" method="post" class="text-start">
+                                                <div class="input-group input-group-outline my-3">
+                                                    <label class="form-label">Email</label>
+                                                    <input type="email" name="email" class="form-control">
                                                 </div>
+                                                <div class="input-group input-group-outline mb-3">
+                                                    <label class="form-label"> Full Name</label>
+                                                    <input type="text" name="fname" class="form-control">
+                                                </div>
+
+                                                <label>Choose a Person:</label>
+                                                <select id="person" name="personlist">
+                                                    <option v>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                    <option>7</option>
+                                                    <option>8</option>
+                                                    <option>9</option>
+                                                    <option>10</option>
+                                                </select>
+
+                                                <label>Price per person</label>
+                                                <span class='font-weight-bold'>
+                                                    <?php echo $price; ?>
+
+                                                </span>
+
+
+
+
+
+
+
+
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Book</button>
+                                                </div>
+
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                             </form>
+
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Book</button>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
 
-                            <?php
 
-                            include("../Admin_Tourism/pages/dbConfig.php");
-
-                            if ($_SERVER["REQUEST_METHOD"] == "POST") { 
-
-                                $name = $_POST['name'];
-                                $email = $_POST['email'];
-                                $person = $_POST['person'];
-
-                                $sql = " INSERT INTO `booking`( `name`, `email`, `person`) VALUES ('$name','$email','$person')";
-                                $result = mysqli_query($conn, $sql);
-
-                                if ($result) {
-                                    echo '<script>alert("data uploaded successfully!")</script>';
-                                } else {
-
-                                    echo '<script>alert("Failed to upload image!")</script>';
-                                }
-                            }
-
-
-                            ?>
 
                             <button type="button" class="btn btn-outline-secondary mb-0">inquiry</button>
 
@@ -277,35 +292,31 @@ while ($row = mysqli_fetch_assoc($result)) {
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-xl-3 col-md-4 py-3">
+                                    <div class="col-xl-3 col-md-4 py-6">
                                         <div class="p-3 text-start">
                                             <i class="material-icons text-4xl text-gradient text-info">spa</i>
                                             <h5 class="mt-3">Guide</h5>
-                                            <p>When playing, surround yourself with people happier than you.</p>
 
                                         </div>
                                     </div>
-                                    <div class="col-xl-3 col-md-4 py-3">
+                                    <div class="col-xl-3 col-md-4 py-6">
                                         <div class="p-3 text-start">
                                             <i class="material-icons text-4xl text-gradient text-info">school</i>
                                             <h5 class="mt-3">Accommodation</h5>
-                                            <p>When playing, surround yourself with people happier than you.</p>
 
                                         </div>
                                     </div>
-                                    <div class="col-xl-3 col-md-4 py-3">
+                                    <div class="col-xl-3 col-md-4 py-6">
                                         <div class="p-3 text-start">
                                             <i class="material-icons text-4xl text-gradient text-info">emoji_people</i>
                                             <h5 class="mt-3">Activities</h5>
-                                            <p>When playing, surround yourself with people happier than you.</p>
 
                                         </div>
                                     </div>
-                                    <div class="col-xl-3 col-md-4 py-3">
+                                    <div class="col-xl-3 col-md-4 py-6">
                                         <div class="p-3 text-start">
                                             <i class="material-icons text-4xl text-gradient text-info">emoji_people</i>
                                             <h5 class="mt-3">Food</h5>
-                                            <p>When playing, surround yourself with people happier than you.</p>
 
                                         </div>
                                     </div>
@@ -326,11 +337,11 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 
 
-            <section class="pb-6">
+            <!-- <section class="pb-6">
                 <div class="container">
                     <div class="row text-start">
                         <div class="col-lg-6">
-                            <h3 class="text-dark mt-4 mb-0">Our latest blogs</h3>
+                            <h3 class="text-dark mt-4 mb-0">Similar Packages </h3>
                             <p>That’s my skill. I’m not really specifically talented at anything except for the ability to learn. That’s what I do. That’s what I’m here for.</p>
                         </div>
                     </div>
@@ -339,44 +350,37 @@ while ($row = mysqli_fetch_assoc($result)) {
 
                             <a href="javascript:;">
                                 <div class="card card-background">
-                                    <div class="full-background" style="background-image: url('../assets/img/examples/blog1.jpg')" loading="lazy"></div>
-                                    <div class="card-body pt-12">
-                                        <h4 class="text-white">Search and Discovery</h4>
-                                        <p class="text-white">Website visitors today demand a frictionless user expericence — especially when using search. Because of the hight standards we tend to offer the best product on market.</p>
-                                    </div>
+                                    <?php
+                                    include("../Admin_Tourism/pages/dbConfig.php");
+
+                                    $sql = "Select * from `tour_packaes`";
+                                    $result = mysqli_query($conn, $sql);
+                                    while ($row = mysqli_fetch_assoc($result)) {
+
+                                        $images = $row['Upload_image'];
+                                        $title = $row['Tour_Title'];
+                                        $sub = $row['sub_title'];
+
+
+
+                                    ?>
+                                        <div class="full-background" style="background-image: url('../Admin_Tourism/pages/packages/images/<?php echo $images; ?>')" loading="lazy"></div>
+                                        <div class="card-body pt-12">
+                                            <h4 class="text-white"><?php echo $title; ?></h4>
+                                            <p class="text-white"><?php echo $sub; ?></p>
+                                        </div>
                                 </div>
                             </a>
+                        <?php
+                                    }
+                        ?>
 
-                        </div>
-                        <div class="col-lg-4 mb-lg-0 mb-4">
 
-                            <a href="javascript:;">
-                                <div class="card card-background">
-                                    <div class="full-background" style="background-image: url('../assets/img/examples/blog2.jpg')" loading="lazy"></div>
-                                    <div class="card-body pt-12">
-                                        <h4 class="text-white">Last visits in US</h4>
-                                        <p class="text-white">Wealth creation is an evolutionarily recent positive-sum game. Status is an old zero-sum game. Those attacking wealth creation are often just seeking status.</p>
-                                    </div>
-                                </div>
-                            </a>
 
-                        </div>
-                        <div class="col-lg-4">
+                        
 
-                            <a href="javascript:;">
-                                <div class="card card-background">
-                                    <div class="full-background" style="background-image: url('../assets/img/examples/blog3.jpg')" loading="lazy"></div>
-                                    <div class="card-body pt-12">
-                                        <h4 class="text-white">Grow in a beautiful area</h4>
-                                        <p class="text-white">Free people make free choices. Free choices mean you get unequal outcomes. You can have freedom, or you can have equal outcomes. You can’t have both.</p>
-                                    </div>
-                                </div>
-                            </a>
-
-                        </div>
                     </div>
-                </div>
-            </section>
+            </section> -->
         </div>
     </section>
 </body>
